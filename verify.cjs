@@ -29,8 +29,15 @@ for (const name of ['popup.html', 'workspace.html', 'documents.html', 'pdf-tools
 for (const license of ['pdf-lib-LICENSE.md', 'fflate-LICENSE', 'dompurify-LICENSE', 'dompurify-LICENSE-MPL', 'turndown-LICENSE', 'turndown-plugin-gfm-LICENSE', 'readability-LICENSE.md', 'pdfjs-dist-LICENSE', 'html2pdf.bundle.min.js.LICENSE.txt']) {
   assert(fs.existsSync(path.join(root, 'vendor', 'licenses', license)), `Missing third-party license: ${license}`);
 }
-for (const name of ['background.js', 'config.js', 'studio/jobs-client.js']) {
-  const code = fs.readFileSync(path.join(root, name), 'utf8');
-  assert(!/cpolar\.top|gcd_token|googleLogin|openAPI\/user|api\.goodconvertpdf\.com/.test(code), `Cloud/account code remains in ${name}`);
+function inspect(directory) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (entry.name === 'vendor') continue;
+    const file = path.join(directory, entry.name);
+    if (entry.isDirectory()) { inspect(file); continue; }
+    if (!/\.(?:js|mjs|html|json)$/.test(entry.name)) continue;
+    const code = fs.readFileSync(file, 'utf8');
+    assert(!/cpolar\.top|gcd_token|googleLogin|openAPI\/user|api\.goodconvertpdf\.com|sk_(?:live|test)_[A-Za-z0-9]+|BEGIN [A-Z ]*PRIVATE KEY/.test(code), `Private service or credential content remains in ${file}`);
+  }
 }
+inspect(root);
 console.log('Community source checks passed.');
