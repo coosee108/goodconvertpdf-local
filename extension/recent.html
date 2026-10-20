@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><script src="i18n-config.js"></script><script src="i18n-runtime.js"></script><link rel="stylesheet" href="i18n.css"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GoodConvertPDF</title><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="studio/studio.css"><link rel="stylesheet" href="quick-workspace.css"><link rel="stylesheet" href="recent.css">
+<script defer="" src="config.js"></script><script defer="" src="shared/site-links.js"></script><script defer="" src="navigation.js"></script><script defer="" src="shared/conversion-options.js"></script><script defer="" src="shared/quick-preferences.js"></script><script defer="" src="shared/pdf-history.js"></script><script defer="" src="shared/quick-i18n.js"></script><script type="module" src="studio/recent-output.js"></script><script defer="" src="recent.js"></script></head>
+<body><div class="studio-shell"><header class="studio-header extension-header"><a class="studio-brand" href="workspace.html"><span data-i18n="msg.9f6c0d8b3c33" style="display:contents">GoodConvert</span><span><span data-i18n="msg.1d393b0081b6" style="display:contents">PDF</span></span></a><nav aria-label="Extension tools" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.69ae26ae4504&quot;}"><a href="workspace.html"><span data-i18n="msg.5cd425f518c2" style="display:contents">Convert</span></a><a href="documents.html"><span data-i18n="msg.b4e929d8bcfe" style="display:contents">Documents</span></a><a href="pdf-tools.html"><span data-i18n="msg.8dc7830ff420" style="display:contents">PDF tools</span></a><a href="recent.html"><span data-i18n="msg.1ac3d44b3c6e" style="display:contents">Recent results</span></a><a data-site="" href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="ext.95637703afaa" style="display:contents">Official website ↗</span></a></nav><details class="extension-local"><summary><span data-i18n="ext.593d330e6c8d" style="display:contents">Local processing</span></summary><div class="local-explanation"><strong><span data-i18n="ext.fe6cb01c2b63" style="display:contents">Processed in your browser</span></strong><p><span data-i18n="ext.28df7b879c36" style="display:contents">PDF conversion and editing run on this device. Document content is not uploaded to our conversion server.</span></p><p><span data-i18n="ext.70291dc4eb02" style="display:contents">Webpages may still load their own images, fonts and other online resources. Save your PDF before closing this tab.</span></p></div></details></header></div><main class="recent-shell">
+<h1 data-q="recent"></h1>
+<p class="hint-inline" data-q="retention"></p>
+<div class="recent-toolbar">
+  <label class="recent-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.5 4.5"></path></svg><input id="recent-search" type="search" autocomplete="off"></label>
+  <select id="recent-sort" class="recent-sort" aria-label="Sort" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.bec69036aa27&quot;}">
+    <option value="newest" data-q="sortNewest"></option>
+    <option value="oldest" data-q="sortOldest"></option>
+    <option value="name" data-q="sortName"></option>
+    <option value="size" data-q="sortSize"></option>
+  </select>
+</div>
+<p id="recent-count" class="recent-count" role="status"></p>
+<p id="recent-status" role="status"></p>
+<section class="recent-section">
+  <div id="recent-empty" class="recent-empty" hidden="">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h5l3 4h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z"></path></svg>
+    <strong data-q="empty"></strong><p data-q="emptyHint"></p>
+  </div>
+  <ul id="recent-list" class="recent-list"></ul>
+</section>
+<section id="recent-preview" class="recent-section recent-preview" hidden=""><div class="recent-preview-head"><h2 id="recent-preview-name"></h2><button id="recent-preview-download" class="btn primary sm" type="button" data-q="download"></button></div><iframe id="recent-viewer" class="recent-viewer" sandbox="allow-same-origin" title="PDF" data-i18n-attrs="{&quot;title&quot;:&quot;msg.1d393b0081b6&quot;}"></iframe></section>
+<section id="storage-card" class="recent-section">
+  <h2 data-q="storageTitle"></h2>
+  <label class="checkbox"><input id="retain-results" type="checkbox"><span data-q="keepDefault"></span></label>
+  <dl class="storage-grid">
+    <div><dt data-q="usedSpace"></dt><dd id="storage-space">—</dd></div>
+    <div><dt data-q="usedCount"></dt><dd id="storage-count">—</dd></div>
+    <div><dt data-q="keepLimit"></dt><dd><span data-i18n="ext.cebe044a6bab" style="display:contents">7 d · 20 · 100 MB</span></dd></div>
+  </dl>
+</section>
+<section id="danger-card" class="recent-danger">
+  <h2 data-q="dangerTitle"></h2>
+  <p data-q="dangerNote"></p>
+  <button id="clear-results" class="btn danger" type="button" data-q="clear"></button>
+</section>
+<details id="rules-card" class="recent-section recent-rules"><summary data-q="rules"></summary><ul id="rule-list" class="recent-list"></ul></details>
+</main>
+</body></html>

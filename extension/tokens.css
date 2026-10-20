@@ -1,0 +1,44 @@
+/* Design tokens — GoodConvertPDF v1 landing (per 《网站技术开发文档》§一). */
+:root {
+  /* Color */
+  --blue: #245BE8;        /* 科技蓝 主色 */
+  --teal: #00C2A8;        /* 青绿 强调 */
+  --ink: #1B1F24;         /* 中性墨 主文字 */
+  --muted: #5B6470;       /* 次要文字 */
+  --bg: #F7F9FC;          /* 背景 */
+  --card: #FFFFFF;        /* 卡片 */
+  --ok: #16A34A;          /* 成功 */
+  --danger: #EF4444;      /* 危险 */
+  --line: #E4E9F2;        /* 描边 */
+  /* 扩展端与控件级扩展令牌（双端共用同一来源，避免各端硬编码） */
+  --blue-strong: #1E4FC0; /* 主色悬浮 / 按下 */
+  --blue-soft: #EAF0FF;   /* 主色浅底（选中态） */
+  --fill: #EDF1F9;        /* 次级控件填充（标签、次要按钮） */
+  --fill-strong: #E1E7F2; /* 输入框描边 / 分组底 */
+  --focus: #8D9FF0;       /* 键盘焦点环 */
+  --danger-bg: #FFF0EF;   /* 危险提示底 */
+  --warn-bg: #FFF8E6;     /* 警告提示底 */
+  --warn-line: #F3E0B0;   /* 警告描边 */
+  --warn-ink: #6B5510;    /* 警告文字 */
+
+  /* Radius */
+  --radius: 16px;
+  --radius-sm: 12px;
+  --radius-pill: 999px;
+  --radius-control: 10px; /* 按钮 / 输入框 */
+  --radius-card: 12px;    /* 卡片 / 面板 */
+
+  /* Shadow */
+  --shadow: 0 8px 24px rgba(27,31,36,0.10);
+  --shadow-sm: 0 2px 8px rgba(27,31,36,0.06);
+
+  /* Spacing scale (4pt) */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px; --s9: 88px;
+
+  /* Type */
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --fs-h1: 44px; --fs-h2: 30px; --fs-h3: 20px; --fs-body: 16px; --fs-sm: 14px;
+
+  /* Layout */
+  --maxw: 1120px;
+}

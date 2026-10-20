@@ -1,0 +1,11 @@
+{
+  "name": "goodconvertpdf-local",
+  "private": true,
+  "version": "1.0.6",
+  "license": "ISC",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node verify.cjs",
+    "build": "node build.cjs"
+  }
+}

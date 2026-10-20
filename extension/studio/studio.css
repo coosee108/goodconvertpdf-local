@@ -1,0 +1,207 @@
+.studio-page{background:#f6f8fc;color:#17233b;font-family:Inter,system-ui,"Segoe UI",sans-serif;margin:0;line-height:1.55}.studio-page *{box-sizing:border-box}.studio-page [hidden]{display:none!important}.studio-page a{color:#405dca;text-decoration:none}.studio-page button,.studio-page input,.studio-page select,.studio-page textarea{font:inherit}.studio-page button,.studio-page select,.studio-page input{min-height:44px}.studio-page button,.studio-page .button{border:1px solid #d5ddeb;border-radius:9px;background:white;color:#273953;padding:10px 15px;cursor:pointer}.studio-page button:disabled{opacity:.55;cursor:wait}.studio-page :focus-visible{outline:3px solid #8d9ff0;outline-offset:3px}.studio-page .primary{background:#405ddb;color:white;border-color:#405ddb;display:inline-flex;justify-content:center;align-items:center;font-weight:600}.studio-shell{max-width:1240px;margin:auto;padding:0 24px}.studio-header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:76px;background:#f6f8fc;border-bottom:1px solid #e0e6ef;box-shadow:0 2px 10px rgba(16,22,33,.06)}.studio-brand{font-size:21px;font-weight:750;color:#17233b!important;letter-spacing:-.7px}.studio-brand span{color:#5069dc}.studio-header nav{display:flex;gap:24px;align-items:center;font-size:14px}.studio-hero{padding:35px 0 25px}.studio-eyebrow{font-size:11px;letter-spacing:.13em;color:#5970b6;font-weight:650}.studio-hero h1{font-size:38px;letter-spacing:-1.4px;line-height:1.15;margin:10px 0}.studio-hero p{color:#60708a;margin:12px 0 0}.studio-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}.studio-card{background:white;border:1px solid #dfe5ef;border-radius:16px;padding:24px;min-width:0}.studio-card h2{font-size:18px;margin:0 0 18px}.source-tabs{display:flex;padding:4px;background:#eef2f9;border-radius:10px;gap:4px;margin-bottom:20px}.source-tabs button{flex:1;min-width:0;background:none;border-color:transparent;padding:8px;font-size:14px}.source-tabs button[aria-selected=true]{background:white;color:#405ddb;border-color:#dfe5ef}.studio-page label{font-size:13px;display:block;color:#52617c;margin-bottom:12px}.studio-page input:not([type=checkbox]),.studio-page select,.studio-page textarea{border:1px solid #d7dfec;border-radius:8px;padding:10px 11px;width:100%;background:#fff;color:#182c49;font-size:16px;min-width:0}.studio-page textarea{min-height:145px;resize:vertical}.studio-page fieldset{border:0;padding:0;margin:0;min-width:0}.control-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.control-row[data-custom]{grid-template-columns:1fr 1fr 1fr}.margins{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.margins label{text-transform:capitalize}.margins input{padding-left:6px!important}.studio-page details{border-top:1px solid #e5eaf2;margin-top:12px;padding-top:5px}.studio-page summary{cursor:pointer;font-size:13px;font-weight:600;min-height:44px;padding:12px 0}.studio-page summary span{float:right;font-size:11px;font-weight:400;color:#758298}.studio-page .checkbox{display:flex;align-items:center;gap:9px;min-height:36px}.checkbox input{width:17px;height:17px;min-height:0;accent-color:#405ddb}.button-row{display:flex;gap:8px;flex-wrap:wrap}.help{font-size:12px;color:#697993;margin:8px 0 14px}.privacy-note{background:#f0f5fc;padding:11px 13px;border-radius:8px;font-size:12px;color:#536c90;margin-bottom:18px}.studio-actions{display:flex;gap:10px;margin-top:20px}.studio-actions .primary{flex:1;min-height:48px}.studio-error{background:#fff0ef;color:#a32b25;border-radius:8px;padding:12px;font-size:13px;white-space:pre-line}.studio-status{font-size:14px;white-space:pre-line}.studio-warnings{background:#fff8e5;color:#755a15;padding:12px 16px;font-size:12px;border-radius:8px}.studio-preview{width:100%;height:620px;border:1px solid #dce2ed;border-radius:8px;background:#f6f7fa}.studio-preview.local{pointer-events:none}.preview-empty{min-height:450px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,#f8faff,#edf1f8);border-radius:10px;padding:35px;color:#6e7f9d}.preview-empty strong{display:block;font-family:Georgia,serif;color:#25365b;font-size:30px;font-weight:400;margin-bottom:14px}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.result-actions a{padding:10px 15px;border:1px solid #d5ddeb;border-radius:8px;min-height:44px}.drop-input{border:1px dashed #9eafd2;background:#f8faff;border-radius:10px;padding:15px}.drop-input.dragging{outline:3px solid #8197e5}.browse-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#405ddb;color:#fff;border:1px solid #405ddb;border-radius:9px;padding:9px 16px;min-height:44px;font-weight:600;cursor:pointer}.browse-btn:hover{background:#334fc4;border-color:#334fc4}.browse-btn:focus-visible{outline:3px solid #8d9ff0;outline-offset:3px}.images-list{list-style:none;margin:14px 0;padding:0;display:grid;gap:10px}.image-row{border:1px solid #e0e6ef;padding:9px;border-radius:9px;display:flex;gap:12px;align-items:center;min-width:0}.image-row img{width:54px;height:65px;object-fit:contain;background:#f0f3f9}.image-row .image-info{min-width:0;flex:1}.image-row strong{display:block;font-size:12px;overflow-wrap:anywhere}.image-row small{font-size:11px;color:#687c98}.image-row button{padding:5px 10px}.image-row .button-row{gap:4px}.studio-footer{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#72819a;padding:30px 0}.studio-footer a{display:inline-block;min-height:44px;padding:10px 0}.more-tools{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;font-size:13px}.more-tools a{min-height:44px;display:inline-flex;align-items:center}.skip-studio{position:absolute;top:-100px;background:#fff;padding:12px;z-index:60}.skip-studio:focus{top:8px}.extension-workspace{padding:24px;max-width:1300px;margin:auto}.selection-tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+@media(max-width:900px){.studio-grid{grid-template-columns:1fr}.studio-preview{height:520px}.preview-empty{min-height:260px}.studio-hero h1{font-size:33px}.studio-header nav{gap:14px}.studio-card{padding:20px}}
+@media(max-width:480px){.studio-shell{padding:0 16px}.studio-header{flex-wrap:wrap;gap:5px;padding:15px 0}.studio-header nav{width:100%;justify-content:space-between}.studio-hero{padding:25px 0 20px}.studio-hero h1{font-size:30px}.studio-card{padding:16px}.studio-page summary span{float:none;display:block;padding-left:14px}.margins{grid-template-columns:1fr 1fr}.control-row{grid-template-columns:1fr}.studio-preview{height:420px}.studio-footer{flex-direction:column;gap:4px}.image-row{align-items:start}.image-row .button-row button{font-size:12px;padding:6px 9px}.extension-workspace{padding:12px}}
+@media(prefers-reduced-motion:reduce){.studio-page *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+#source-web .control-row{grid-template-columns:minmax(0,1fr) auto;align-items:start}
+
+.result-card .studio-status{font-weight:650;border-left:3px solid #9eafd2;padding-left:12px}.result-card[data-state=working] .studio-status{border-color:#405ddb;color:#405ddb}.result-card[data-state=ready] .studio-status{border-color:#168060;color:#12694f}.result-card[data-state=failed] .studio-status{border-color:#b03b33;color:#9b3029}.result-card[data-state=stopped] .studio-status{border-color:#ad741b}.result-actions{margin:12px 0 16px}.action-feedback{color:#405dca;font-weight:600}.result-card #review-loading{font-size:13px;margin-bottom:8px}.studio-status,.studio-error,.studio-warnings{overflow-wrap:anywhere}
+.markdown-page #md-preview-h{scroll-margin-top:100px}.markdown-page #md-markdown{min-height:340px;max-height:70vh}.markdown-page .studio-actions #md-cancel{min-width:104px}.markdown-page #md-status{padding:10px 12px;border-radius:8px;background:#eef3ff}.markdown-page .result-card[data-state=working]{border-color:#9eafe8}.markdown-page .result-card[data-state=ready]{border-color:#9bd5c5}.markdown-page .result-card h2:focus{outline:none}
+.studio-page #preview-heading{scroll-margin-top:100px}.studio-page #preview-heading:focus{outline:none}.studio-page .result-card[data-state=ready]{border-color:#9bd5c5}
+.studio-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;margin:0 0 18px;padding:0}.studio-steps li{border:1px solid #dfe5ef;border-radius:10px;background:#fff;color:#65748e;padding:11px 14px;font-size:13px;font-weight:600}.studio-steps li.is-current{border-color:#7891e5;background:#eaf0ff;color:#2f4dc3}@media(max-width:600px){.studio-steps{gap:6px}.studio-steps li{font-size:11px;padding:8px;line-height:1.3}}
+.studio-page [aria-invalid=true],.studio-page .drop-input:has([aria-invalid=true]){outline:2px solid #b03b33;outline-offset:2px}
+.allowance-help{margin:12px 0;padding:16px;border:1px solid #cbd7f4;border-radius:12px;background:#f2f6ff;color:#213a74}.allowance-help strong{display:block;font-size:15px}.allowance-help p{margin:5px 0 12px;font-size:13px}.allowance-help .button-row a,.allowance-help .button-row button{display:inline-flex;align-items:center;min-height:44px;padding:9px 13px;border-radius:8px;font-size:13px;font-weight:650}.allowance-help .button-row a{background:#fff;border:1px solid #bfcdf0}.allowance-help .button-row button{background:transparent;border-color:#bfcdf0}
+.quick-layout{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}.quick-layout button{min-height:40px;font-size:12px;padding:7px 10px}.quick-layout button[aria-pressed=true]{border-color:#405ddb;background:#eaf0ff;color:#2f4dc3}.quick-layout .help{flex-basis:100%;margin:2px 0 4px}
+.batch-review-list{max-height:180px;overflow:auto;margin:0 0 12px;padding-left:24px;font-size:12px;overflow-wrap:anywhere}.batch-review-list li{padding:3px 0}.batch-review-list [data-kind=duplicate]{color:#805a16}.batch-review-list [data-kind=invalid]{color:#a32b25}
+.task-project{display:inline-block;border-radius:999px;background:#eef2ff;color:#405dca;padding:2px 8px;font-size:11px;margin:4px 0}
+@media(max-width:900px){.markdown-page #md-markdown{min-height:300px}}
+
+.preview-empty{flex-direction:column}.result-jump{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600}
+.task-list{padding:0;list-style:none}.task-list li{padding:16px 0;border-top:1px solid #e0e6ef;overflow-wrap:anywhere}.task-list label{display:flex;align-items:center;gap:10px;font-weight:600}.task-list input[type=checkbox]{width:18px;min-height:18px}.task-list p{font-size:13px}
+.column-editor{display:grid;grid-template-columns:1fr 2fr 1fr;gap:8px;border-bottom:1px solid #ddd;padding:12px 0}.column-editor label{min-width:0}.data-sample{max-height:260px;overflow:auto;margin:16px 0}.data-sample table{border-collapse:collapse;font-size:12px}.data-sample th,.data-sample td{border:1px solid #dde3ee;padding:6px;min-width:100px;white-space:pre-wrap}.message-list{max-height:350px;overflow:auto;margin:16px 0}.message-list label{display:flex;gap:10px;align-items:start;white-space:pre-wrap;overflow-wrap:anywhere}.message-list input{flex:none;width:18px;min-height:18px}#document-download{margin-bottom:14px}.studio-header nav{flex-wrap:wrap}
+/* 导航：搜索 / 快捷跳转（与全站 ⌘K 一致，独立配色避免依赖 global.css 变量） */
+.studio-header .nav-qj{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1px solid #d5ddeb;background:#fff;color:#60708a;border-radius:999px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:border-color .12s ease,color .12s ease}
+.studio-header .nav-qj:hover{border-color:#405dca;color:#405dca}
+.studio-header .nav-qj svg{width:16px;height:16px;flex:none}
+.studio-header .nav-qj kbd{display:none}
+@media (min-width:768px){.studio-header .nav-qj kbd{display:inline-block;font-family:inherit;font-size:12px;background:#fff;border:1px solid #d5ddeb;border-bottom-width:2px;border-radius:6px;padding:2px 6px}}
+.qj{position:fixed;inset:0;z-index:300;display:flex;align-items:flex-start;justify-content:center;padding:12vh 16px 16px;background:rgba(16,22,33,.45);backdrop-filter:blur(3px)}
+.qj[hidden]{display:none}
+.qj-card{width:100%;max-width:520px;background:#fff;border:1px solid #dfe5ef;border-radius:14px;box-shadow:0 30px 80px rgba(16,22,33,.28);overflow:hidden}
+.qj-input{width:100%;box-sizing:border-box;border:none;border-bottom:1px solid #dfe5ef;padding:16px 18px;font-size:16px;font-family:inherit;color:#17233b}
+.qj-input:focus{outline:none}
+.qj-list{list-style:none;margin:0;padding:6px;max-height:min(56vh,420px);overflow:auto}
+.qj-item{display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;cursor:pointer;font-size:14px;min-height:44px}
+.qj-kind{font-size:11px;font-weight:700;color:#405dca;background:rgba(64,93,218,.10);border-radius:999px;padding:2px 8px;flex:none}
+.qj-desc{color:#60708a;margin-left:auto;font-size:12px;text-align:right}
+.qj-item.active,.qj-item:hover{background:#f0f3f9}
+.qj-empty{padding:18px;color:#60708a;font-size:14px}
+.qj-hint{border-top:1px solid #dfe5ef;padding:10px 14px;color:#60708a;font-size:12px}
+/* 信息区块：How it works / FAQ（studio 配色，独立于 global.css） */
+.studio-info{max-width:860px;margin:48px auto 0}
+.studio-info h2{font-size:26px;margin:0 0 6px;letter-spacing:-.6px}
+.studio-info .info-sub{color:#60708a;margin:0 0 24px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 8px}
+.step{border:1px solid #dfe5ef;border-radius:14px;padding:18px;background:#fff}
+.step b{display:block;color:#405dca;font-size:12px;letter-spacing:.04em;margin-bottom:8px}
+.step span{color:#3f4a5c;font-size:15px;line-height:1.55}
+@media(max-width:760px){.steps{grid-template-columns:1fr}.studio-info{max-width:none}}
+/* FAQ 参考截图改为简约行式手风琴：居中大标题、无副标题、横向通栏分割线、箭头指示器 */
+#faq h2{text-align:center}
+#faq .info-sub{display:none}
+.faq-list{margin:0;border-top:1px solid #e0e6ef}
+.faq-list details{background:transparent;border:0;border-bottom:1px solid #e0e6ef;border-radius:0;padding:0;margin:0}
+.faq-list summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:500;font-size:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;color:#1B1F24}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"→";color:#1B1F24;font-size:14px;font-weight:500;flex:none;line-height:1}
+.faq-list details[open] summary::after{content:"↓"}
+.faq-list details p{margin:0 0 16px;color:#5B6470;font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.faq-list details a{color:#405dca}
+.pdf-file-row{border:1px solid #dce3ef;border-radius:10px;padding:14px;min-width:0;overflow-wrap:anywhere}.pdf-file-row strong,.pdf-file-row small{display:block}.pdf-file-row small{color:#60708a}.pdf-file-row label{margin:10px 0}.pdf-file-row input{width:100%}
+.extension-source-card{border:1px solid #dce3ef;background:#f7f9ff;border-radius:12px;padding:16px;margin-bottom:16px;overflow-wrap:anywhere}.extension-source-card select{width:100%;min-width:0;margin-bottom:12px}.extension-source-card strong{display:block;font-size:15px}
+/* More converters：移动端兼容（换行/整列）+ 更大点击区 */
+.more-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:28px 0 6px}
+.more-tools>span{font-weight:700;color:#17233b;font-size:15px}
+.more-tools a{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border:1px solid #d5ddeb;border-radius:999px;background:#fff;color:#405dca;font-weight:600;font-size:14px}
+.more-tools a:hover{border-color:#405dca;background:#f3f6fe}
+.platform-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:24px 0}
+.platform-links-heading{grid-column:1/-1;font-size:17px;font-weight:700;color:#17233b}
+.studio-page .platform-links a{display:flex;align-items:center;gap:14px;padding:18px;border:1px solid #d5ddeb;border-radius:12px;background:#fff;color:#203658;transition:background .15s,border-color .15s}
+.studio-page .platform-links a:hover{background:#edf2ff;border-color:#8399e9}
+.platform-card-icon{display:grid;place-items:center;flex:0 0 44px;height:44px;border-radius:10px;background:#eef2ff;color:#405ddb;font-size:20px;font-weight:700}
+.platform-card-copy{display:grid;gap:5px;min-width:0}.platform-card-copy strong{font-size:16px}.platform-card-copy>span{font-size:14px;color:#52617c}
+@media(max-width:640px){.platform-links{grid-template-columns:1fr}}
+
+@media(max-width:760px){.more-tools{flex-direction:column;align-items:stretch;gap:10px}.more-tools a{justify-content:center}}
+/* 已登录网页说明：标题加大 + 插件下载按钮 */
+#extension-help{background:#fff;border:1px solid #dfe5ef;border-radius:12px;padding:0 18px;margin:6px 0 16px}
+#extension-help summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;color:#17233b}
+#extension-help summary::-webkit-details-marker{display:none}
+#extension-help summary::after{content:"+";color:#405dca;font-size:24px;font-weight:700;line-height:1}
+#extension-help[open] summary::after{content:"\2013"}
+#extension-help p{margin:0 0 16px;color:#3f4a5c;font-size:15px;line-height:1.6;overflow-wrap:anywhere}
+#extension-help .store-cta{display:inline-flex;justify-content:center;align-items:center;min-height:46px;margin:0 0 18px;padding:12px 18px;background:#405ddb;color:#fff;border-radius:9px;font-weight:600;font-size:15px}
+#extension-help .store-cta:hover{background:#334fc4}
+@media(max-width:760px){#extension-help .store-cta{display:flex;width:100%}}
+/* 锚点跳转留白：避开固定的 sticky 导航栏（约 76px 高），避免目标被遮挡 */
+#converter,#tools,#more-converters,#extension-help,#how,#faq{scroll-margin-top:90px}
+/* 扩展页眉组件规则：一律按 .extension-header 自身生效，不依赖 body 是否挂 .studio-page。
+   背景：recent.html 的 <body> 未带 .studio-page（该页用独立的 tokens.css + .recent-* 体系），导致 studio.css 里挂在 .studio-page 上的
+   通用规则在该页静默失效，页眉与其它三页不一致。已暴露三类问题，在此统一收口：
+   1) 链接下划线：.studio-page a{color:#405dca;text-decoration:none} 够不到 recent，导航与 logo 落回浏览器默认下划线 → .extension-header a。
+   2) 「本地处理」胶囊被正文 details 规则污染：.studio-page details{border-top:1px solid #e5eaf2;margin-top:12px;padding-top:5px}
+      特异性 (0,1,1) 高于 .extension-local 的 border:0/padding:0/margin:0 重置 (0,1,0)，在 workspace/documents/pdf-tools 三页上
+      覆盖了该重置，胶囊上方多出一条 1px 细线且被压低；recent 呈现的才是意图样式 → 提升为 .extension-header .extension-local 让重置真正生效。
+   3) 胶囊标题字重泄漏：.studio-page summary{font-weight:600} 未被 .extension-local summary 声明，在挂 .studio-page 的三页上漏出 600 → 显式声明 400。
+   4) 胶囊标题内 i18n 包裹层被正文规则污染：构建期把文案包进 <span data-i18n style="display:contents">，.studio-page summary span{float:right;font-size:11px;color:#758298}
+      (0,1,2) 在该 span 上生效，把「本地处理」四字从继承的 12px/#256558 改成 11px/#758298（recent 无此类故呈现意图样式）→ 按 (0,2,2) 显式复位。
+   影响面：仅页眉；正文里的 details/summary 仍走 .studio-page 规则，不受此处改动影响。*/.extension-header a{color:#405dca;text-decoration:none}.extension-header{gap:18px;flex-wrap:wrap}.extension-header nav{gap:6px;margin-left:auto}.extension-header nav a{padding:10px 12px;border-radius:9px;min-height:44px;display:inline-flex;align-items:center;font-size:13px}.extension-header nav a:hover,.extension-header nav a[aria-current=page]{background:#e9eefc;color:#334fb5}.extension-header .extension-local{position:relative;border:0;padding:0;margin:0;flex-shrink:0}.extension-local summary{border:1px solid #cfe3df;background:#eff8f5;color:#256558;border-radius:9px;padding:10px 12px;font-size:12px;font-weight:400;min-height:44px;list-style:none;cursor:pointer}.extension-local summary::after{content:' ⓘ'}.extension-local summary::-webkit-details-marker{display:none}.extension-header .extension-local summary span{float:none;font-size:inherit;font-weight:inherit;color:inherit}.extension-local .local-explanation{position:absolute;right:0;top:100%;margin-top:8px;width:290px;max-width:calc(100vw - 40px);background:white;border:1px solid #dce3ef;border-radius:12px;padding:16px;box-shadow:0 12px 32px #17233b20;z-index:65;font-size:13px;line-height:1.6;color:#53627b}.local-explanation strong{color:#17233b}.local-explanation p{margin:8px 0 0}@media(max-width:760px){.extension-header{padding:12px 0;gap:10px}.extension-header .studio-brand{flex:1}.extension-header nav{order:3;width:100%;margin:0;justify-content:flex-start}.extension-header nav a{flex:1;justify-content:center}.extension-local{order:2}}
+.studio-page input[type=file]{position:absolute;width:1px;height:1px;min-height:0;margin:-1px;border:0;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.studio-page label:has(input[type=file]:focus-visible),.studio-page .drop-input:has(input[type=file]:focus-visible){outline:3px solid #8d9ff0;outline-offset:3px}
+.studio-page .drop-input{position:relative}
+.studio-page .drop-input>input[type=file]{inset:0;width:100%;height:100%;min-height:0;clip-path:none;opacity:0;cursor:pointer}
+.tool-switch{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.tool-switch button[aria-pressed=true]{background:#405ddb;color:#fff;border-color:#405ddb;font-weight:600}
+.pdf-file-row.removed strong{text-decoration:line-through;opacity:.6}
+.site-rule-row{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin:.75rem 0;color:var(--muted,#536481)}
+.site-rule-row[hidden]{display:none}
+.site-rule-row button{font:inherit;padding:.45rem .7rem;border:1px solid #ccd8ee;border-radius:9px;background:#fff;color:#3757ae;cursor:pointer}
+.site-rule-row button:disabled{opacity:.5;cursor:default}
+.tab-batch{margin-top:12px;padding-top:10px;border-top:1px solid #dce4f2}
+.tab-batch summary{cursor:pointer;font-weight:600}
+.tab-batch fieldset{display:block;max-height:170px;overflow:auto;margin:10px 0;padding:8px;border:1px solid #dce4f2;border-radius:8px}
+.tab-batch fieldset label{display:flex;align-items:center;gap:8px;margin:5px 0;cursor:pointer}
+.tab-batch fieldset input{flex:none}
+.tab-batch p{margin:.5rem 0}
+/* Shared action states across converter, batch, document and PDF workspaces. */
+.studio-page button:not(:disabled),.studio-page .button,.studio-page .result-actions a{transition:background-color .15s ease,border-color .15s ease,box-shadow .15s ease,transform .15s ease}
+.studio-page button:not(:disabled):hover,.studio-page .button:hover,.studio-page .result-actions a:hover{border-color:#7085d7;box-shadow:0 3px 12px rgba(30,55,120,.12)}
+.studio-page button.primary:not(:disabled):hover,.studio-page .primary.button:hover,.studio-page .result-actions a.primary:hover{background:#344fc4;border-color:#344fc4;color:#fff}
+.studio-page button:not(:disabled):active,.studio-page .button:active{transform:translateY(1px)}
+.studio-page button:disabled{cursor:not-allowed;opacity:.56}
+.studio-page button[aria-busy=true]{cursor:progress}
+.studio-page .button-row button,.studio-page .result-actions a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;text-align:center}
+.studio-page .button-row,.studio-page .result-actions,.studio-page .studio-actions{min-width:0}
+.studio-page .button-row button,.studio-page .result-actions a,.studio-page .studio-actions button{white-space:normal;overflow-wrap:anywhere}
+.studio-page a[hidden],.studio-page button[hidden]{display:none!important}
+@media(max-width:480px){.studio-page .button-row>button,.studio-page .result-actions>a{flex:1 1 140px}.studio-page .studio-actions{flex-wrap:wrap}.studio-page .studio-actions>button{flex:1 1 140px}}
+@media(prefers-reduced-motion:reduce){.studio-page button,.studio-page .button,.studio-page .result-actions a{transition:none!important}}
+
+.content-modes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.content-modes button{flex:1 1 140px;min-height:44px}.content-modes button[aria-pressed=true]{background:#405ce0;color:#fff;border-color:#405ce0}.content-modes button:focus-visible{outline:3px solid #8299ff;outline-offset:3px}
+.content-summary{display:grid;gap:6px;margin:16px 0;padding:14px 16px;border:1px solid #cdd8f3;border-radius:12px;background:#f3f6ff;color:#253c70;overflow-wrap:anywhere;min-width:0}.content-summary[hidden]{display:none}.content-summary span{font-size:14px;line-height:1.5}
+
+/* Keep source feedback beside the field that needs attention. */
+.studio-page .source-validation{margin:8px 0 12px;padding:9px 12px;border-left:3px solid #b03b33;border-radius:6px;background:#fff0ef;color:#9b3029;font-size:13px;line-height:1.45;overflow-wrap:anywhere}
+.studio-page .processing-details{border:0;margin:8px 0 14px;padding:0}
+.studio-page .processing-details summary{display:flex;align-items:center;gap:8px;min-height:40px;padding:8px 11px;border-radius:8px;background:#f0f5fc;color:#405d82;list-style:none;font-size:12px;line-height:1.4}
+.studio-page .processing-details summary::-webkit-details-marker{display:none}
+.studio-page .processing-details summary::after{content:'⌄';margin-left:auto;font-size:18px;line-height:1}
+.studio-page .processing-details[open] summary::after{transform:rotate(180deg)}
+.studio-page .processing-details .privacy-note{margin:8px 0 0}
+@media(max-width:600px){#source-web .control-row{grid-template-columns:minmax(0,1fr)}#source-web #paste-url{justify-self:end;min-width:120px}.studio-page .studio-hero{padding-bottom:16px}.studio-page .studio-hero p{font-size:14px;line-height:1.45}.studio-page .studio-steps{margin-bottom:14px}}
+@media(max-width:400px){.source-tabs button{font-size:13px;padding:8px 3px;overflow-wrap:normal;word-break:normal}.content-modes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.content-modes button{min-width:0;padding:8px 4px;font-size:12px;line-height:1.25}.content-modes button:last-child{grid-column:1/-1}.quick-layout [data-quick=reset]{min-height:32px;padding:4px 2px;border:0;background:transparent;color:#52617c;text-decoration:underline}}
+.region-picker{box-sizing:border-box;width:min(1100px,94vw);max-height:92vh;max-height:92svh;padding:0;border:1px solid #ccd5ed;border-radius:16px;color:#17233b;background:#fff;box-shadow:0 16px 64px #17233b40}
+.region-picker[open]{display:flex;flex-direction:column}
+.region-picker::backdrop{background:#17233b88}
+.region-picker header,.region-picker footer{padding:16px 20px;flex-shrink:0}
+.region-picker h2{margin:0 0 8px;font-size:22px}
+.region-picker p{margin:6px 0;overflow-wrap:anywhere}
+.region-picker footer{border-top:1px solid #dce3f2;display:grid;gap:10px}
+.region-picker select{width:100%;min-width:0;max-width:100%;min-height:44px}
+.region-picker .button-row{display:flex;flex-wrap:wrap;gap:8px}
+.region-picker button{min-height:44px;padding:8px 12px;border:1px solid #ccd5ed;border-radius:8px;background:#f4f6ff;color:#2440ab;cursor:pointer}
+.region-picker button:disabled{opacity:.5;cursor:default}
+.region-picker [data-confirm]{background:#4359dc;color:#fff}
+.region-picker :focus-visible{outline:3px solid #4263eb;outline-offset:2px}
+.region-scroll{overflow:auto;min-height:80px;flex:1;background:#edf1f8;overscroll-behavior:contain}
+.region-canvas{position:relative;min-width:640px;line-height:0}
+.region-canvas img{display:block;width:100%;height:auto;cursor:crosshair}
+.region-canvas img:not([src]){display:none}
+.region-outline{position:absolute;box-sizing:border-box;border:3px solid #4359dc;background:#4359dc22;pointer-events:none}
+@media(max-width:600px){.region-picker header,.region-picker footer{padding:12px}.region-picker h2{font-size:18px}.region-picker .button-row button{flex:1 1 42%}.region-picker [data-help]{font-size:13px}.region-picker footer{max-height:45vh;overflow:auto}}
+.region-excluded{position:absolute;box-sizing:border-box;border:2px dashed #b42318;background:repeating-linear-gradient(135deg,#b4231830 0 6px,#ffffff80 6px 12px);pointer-events:none}
+.region-picker [data-exclude][aria-pressed=true]{background:#fff0ed;border-color:#b42318;color:#912018}
+.region-picker [data-recommendations]{display:flex;flex-wrap:wrap;gap:6px}
+.region-picker [data-recommendations] button{min-height:36px}
+.region-picker [data-warnings]{font-size:13px;color:#79520a;background:#fff7df;padding:8px;border-radius:6px}
+.region-picker [data-pager]{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px}
+.region-picker [data-pager][hidden]{display:none}
+.region-picker [data-segments]{width:auto;min-width:90px}
+.region-picker [data-prev],.region-picker [data-next]{min-width:44px;font-size:20px;padding:4px 10px}
+.region-picker [data-segment-context]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#52617c;flex:1 1 220px}
+.region-picker [data-selection-summary]{margin:0;padding:10px 12px;min-height:62px;border-radius:8px;background:#eef3ff;color:#203775;font-weight:600;font-size:13px;line-height:1.45;overflow-wrap:anywhere}
+.region-picker [data-advanced]{margin:0;padding:0;border:0}
+.region-picker [data-advanced] summary{min-height:36px;padding:7px 0;color:#405dca}
+.region-picker [data-advanced] label{margin:4px 0 0}
+.region-picker header{max-height:32vh;overflow:auto}
+.region-picker [data-excluded-count]{font-size:13px;color:#912018}
+.region-picker [data-confirm]{margin-left:auto}
+/* Prominent "Add PDF files" drop zone on the PDF tools page. */
+.studio-page .drop-input.pdf-add{display:block;border:2px dashed #9fb2e8;border-radius:12px;background:#f7f9ff;padding:16px;margin:10px 0 6px;text-align:center;transition:border-color .15s,background .15s}
+.studio-page .drop-input.pdf-add:hover,.studio-page .drop-input.pdf-add.dragging{border-color:#405ddb;background:#eef3ff}
+.studio-page .drop-input.pdf-add.dragging{background:#e3ebfa}
+.studio-page .pdf-add-hint{display:flex;flex-direction:column;align-items:center;gap:4px;color:#3156ba}
+.studio-page .pdf-add-hint svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.studio-page .pdf-add-hint strong{font-size:15px;color:#1f3564}
+.studio-page .pdf-add-hint small{font-size:12px;color:#60708a}
+#ai-review-summary{padding:12px 14px;border:1px solid #b9cafa;border-radius:10px;background:#eef3ff;color:#20386e;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+
+.result-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.result-actions>.help{flex-basis:100%}.result-actions>#document-download{margin-bottom:0}
+
+/* Readable guidance on the website and the extension workbench. */
+.studio-info .info-sub{font-size:15px;line-height:1.55;color:#41516b}
+.studio-info .step b{font-size:15px;letter-spacing:0;color:#2949ad}
+.studio-info .step span{font-size:15px;line-height:1.65;color:#34445f}
+.studio-info .faq-list summary{font-size:16px;line-height:1.5;color:#17233b}
+.studio-info .faq-list details p{font-size:15px;line-height:1.65;color:#34445f}
+.studio-footer{font-size:14px;color:#41516b}
+/* Keep all five PDF result actions on one row. Labels may use two lines. */
+.studio-page .result-card .result-actions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;align-items:stretch}
+.studio-page .result-card .result-actions :is(a,button){display:flex;align-items:center;justify-content:center;text-align:center;padding:7px 4px;font-size:12px;line-height:1.3;min-height:48px;min-width:0;overflow-wrap:anywhere}
+.studio-page .result-card .result-actions>.help{grid-column:1/-1}
+
+.url-actions{display:flex;gap:8px;flex-wrap:wrap}
+.url-actions button{flex:1 1 auto}
+.source-clear-row{display:flex;justify-content:flex-end;margin:8px 0 12px}
+.source-clear-row button{min-height:36px;padding:6px 12px}
+@media(max-width:480px){#source-web>.control-row{grid-template-columns:1fr}}

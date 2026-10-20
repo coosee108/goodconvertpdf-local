@@ -1,0 +1,19 @@
+/* Injected before print: hide extension UI and clean the page for PDF export. */
+
+/* Remove common chrome that should not appear in the exported PDF. */
+@media print {
+  header nav, .nav, #nav, .navbar, .header__nav,
+  aside, .sidebar, .footer, .site-footer, .cookie-banner, .ad, .ads,
+  [data-ad], .newsletter, .popup, .modal, .chat-widget, .social-share,
+  #comments, .comments, .related-posts, .recommended { display: none !important; }
+  @page { margin: 16mm; }
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    width: 100% !important;
+  }
+  a[href]:after { content: ""; }       /* don't print link URLs */
+  img { max-width: 100% !important; }
+  * { box-shadow: none !important; text-shadow: none !important; }
+}

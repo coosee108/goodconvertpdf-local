@@ -1,0 +1,315 @@
+/* 设计令牌来自唯一来源 tokens.css（由 scripts/sync-conversion.js 从 web/assets 同步到扩展端）。
+   变量名与网站一致，扩展端不再自建令牌，避免双端配色/圆角漂移。 */
+@import url("tokens.css");
+* { box-sizing: border-box; }
+body {
+  width: 340px;
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+}
+.hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px 6px;
+}
+.brand { font-weight: 800; font-size: 16px; letter-spacing: -0.3px; }
+.brand span { color: var(--blue); }
+.badge.pro {
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 3px 8px; border-radius: 999px;
+}
+.status { padding: 0 16px 8px; font-size: 12px; color: var(--muted); }
+.tabs { display: flex; gap: 6px; padding: 0 16px; }
+.tab {
+  flex: 1; border: none; background: var(--fill); color: var(--muted);
+  padding: 8px; border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 13px;
+}
+.tab.active { background: var(--blue); color: #fff; }
+.panel { padding: 14px 16px; }
+.panel.hidden { display: none; }
+.hint { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.btn {
+  border: none; border-radius: 10px; padding: 9px 12px; font-weight: 600;
+  cursor: pointer; font-size: 13px; background: var(--fill); color: var(--ink);
+}
+.btn.primary { background: var(--blue); color: #fff; }
+.btn.ghost { background: transparent; color: var(--blue); flex: 1; }
+.btn.block { width: 100%; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+textarea {
+  width: 100%; border: 1px solid var(--fill-strong); border-radius: 10px; padding: 10px;
+  font-family: inherit; font-size: 13px; resize: vertical; margin-bottom: 10px;
+}
+.md-option{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin:0 0 10px;cursor:pointer}
+.md-option input{margin:0;accent-color:var(--blue)}
+.md-preview{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;line-height:1.5;margin:10px 0}
+.md-actions{display:flex;gap:6px}.md-actions .btn{flex:1;padding:9px 6px;font-size:12px}
+.md-warnings{margin:10px 0 0;padding:10px 10px 10px 26px;background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:var(--radius-control);font-size:11px;color:var(--warn-ink)}
+.md-warnings li{margin:2px 0}
+.chat-log {
+  height: 120px; overflow: auto; background: var(--card); border: 1px solid var(--fill-strong);
+  border-radius: 10px; padding: 8px; font-size: 12px; margin-bottom: 8px;
+}
+.chat-log .u { color: var(--blue); font-weight: 600; }
+.chat-input { display: flex; gap: 6px; margin-bottom: 10px; }
+.chat-input input { flex: 1; border: 1px solid var(--fill-strong); border-radius: 10px; padding: 8px; font-size: 13px; }
+.ftr { display: flex; gap: 6px; padding: 10px 16px 16px; }
+.hidden { display: none; }
+.popup-source{margin:4px 16px 16px;padding:12px;background:white;border:1px solid var(--line);border-radius:12px}.popup-source strong{display:block;font-size:13px;overflow-wrap:anywhere}.popup-source p{margin:6px 0 0;line-height:1.5}.workspace-link{padding:0 16px 16px;display:grid;gap:12px;text-align:center}.workspace-link a{font-size:12px;color:var(--blue);text-decoration:none}.workspace-link a.web-link{font-weight:600;color:var(--ink);background:var(--blue-soft);border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-top:2px}.workspace-link a.web-link:hover{background:var(--blue-soft)}.tabs{flex-wrap:wrap}.tabs .tab{flex:1 0 28%;min-height:36px}.btn{min-height:40px}:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.task-map{margin:0 16px 14px}.task-map strong{display:block;font-size:13px;margin-bottom:8px}.task-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}:is(.task-grid,.extra-sources) .btn{font-size:12px;text-align:left;min-height:46px;padding:8px}.task-map .hint{margin:7px 0 0;line-height:1.4}
+.local-choices{display:flex;gap:6px;margin-top:7px}.local-choices.hidden{display:none}.local-choices .btn{flex:1;font-size:11px;padding:7px 4px}
+.btn,.tab,.workspace-link a{transition:background-color .15s ease,box-shadow .15s ease,border-color .15s ease}
+.btn:not(:disabled):hover,.tab:not(:disabled):hover,.workspace-link a:hover{box-shadow:0 2px 10px rgba(30,55,120,.15)}
+.btn.primary:not(:disabled):hover{background:var(--blue-strong)}
+.btn:active:not(:disabled),.tab:active:not(:disabled){transform:translateY(1px)}
+.btn:disabled{cursor:not-allowed}
+.tabs .tab{min-height:44px;overflow-wrap:anywhere}
+.md-actions{flex-wrap:wrap}.md-actions .btn{flex:1 1 90px;min-height:44px}
+.workspace-link a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;overflow-wrap:anywhere}
+#hint[role=alert]{color:var(--danger);background:var(--danger-bg);border-radius:var(--radius-control);padding:8px 10px}
+@media(prefers-reduced-motion:reduce){.btn,.tab,.workspace-link a{transition:none!important}}
+/* Keep the main popup within the browser's 600px popup height. */
+body{display:flex;flex-direction:column}
+body> *{flex-shrink:0}
+.hdr{padding:8px 12px 3px}
+.status{padding:0 12px 3px}
+.popup-source{margin:3px 12px 8px;padding:8px 10px}
+.popup-source p{margin-top:2px;line-height:1.3}
+.task-map{margin:0 12px 7px}
+.task-map strong{margin-bottom:5px}
+.task-grid{gap:5px}
+:is(.task-grid,.extra-sources) .btn{min-height:38px;padding:5px 8px}
+.task-map .hint{margin-top:4px;line-height:1.3}
+.tabs{gap:4px;padding:0 12px}
+.tabs .tab{flex:1 0 22%;min-height:34px;padding:5px 3px;font-size:11px}
+.panel{padding:8px 12px}
+.panel .hint{margin-bottom:6px}
+.panel textarea{height:88px;resize:none;margin-bottom:6px}
+.chat-log{height:54px;margin-bottom:5px}
+.chat-input{margin-bottom:5px}
+.md-option{margin-bottom:6px}
+.ftr{padding:5px 12px;gap:4px}
+.ftr .btn{min-height:34px;padding:5px}
+.workspace-link{padding:0 12px 8px;grid-template-columns:1fr 1fr;gap:5px}
+.workspace-link #open-studio{grid-column:1/-1;min-height:36px}
+.workspace-link a{min-height:40px;font-size:11px;line-height:1.2;padding:4px 6px}
+.workspace-link a.web-link{margin:0;padding:4px 6px;display:flex;flex-direction:column;gap:2px}
+.workspace-link a.web-link small{font-size:10px;font-weight:400;overflow-wrap:anywhere}
+.back-tasks{margin:0 12px 6px;min-height:30px;padding:4px 9px;font-size:12px}
+body[data-view=tasks] .panel{display:none}
+body[data-view=formats] .popup-source,body[data-view=formats] .task-map{display:none}
+/* A clear hierarchy: page context, four tasks, then compact source shortcuts. */
+body{background:var(--bg);color:var(--ink);font-family:var(--font)}
+.hdr{border-bottom:1px solid var(--line);margin-bottom:3px}
+.brand{letter-spacing:-.5px;color:var(--ink)}.brand span{color:var(--blue)}
+.status{font-size:11px;color:var(--muted)}
+.popup-source{border-color:var(--line);box-shadow:var(--shadow-sm);border-left:3px solid var(--blue)}
+.popup-source strong{line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.task-map>strong{font-size:12px;color:var(--muted)}
+:is(.task-grid,.extra-sources) .btn{display:flex;align-items:center;gap:8px;min-height:44px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:var(--radius-control);font-weight:600;line-height:1.3}
+:is(.task-grid,.extra-sources) .btn svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;color:var(--blue)}
+.task-grid #task-web:not(:disabled){background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 3px 8px rgba(36,91,232,.14)}
+.task-grid #task-web:not(:disabled) svg{color:#fff}
+:is(.task-grid,.extra-sources) .btn:disabled{opacity:1;color:var(--muted);background:var(--fill);border-color:var(--line)}:is(.task-grid,.extra-sources) .btn:disabled svg{color:var(--muted)}
+:is(.task-grid,.extra-sources) .btn[aria-expanded=true]{background:var(--blue-soft);border-color:var(--blue)}
+.local-choices{padding:0 4px;background:var(--blue-soft);border-radius:var(--radius-control)}.local-choices .btn{background:var(--card);min-height:30px}
+.source-caption{margin:2px 12px;font-size:11px;color:var(--muted);font-weight:600}
+body[data-view=formats] .source-caption{display:none}
+body[data-view=tasks] .tab.active{background:var(--fill);color:var(--muted)}
+.tabs .tab{border:1px solid transparent;background:var(--fill);color:var(--muted);border-radius:8px}
+body[data-view=formats] .tab.active{background:var(--card);border-color:var(--blue);color:var(--blue-strong);box-shadow:var(--shadow-sm)}
+.back-tasks{background:transparent;color:var(--blue);padding-left:0;text-align:left}
+.panel{background:var(--card);margin:6px 12px 0;padding:7px 9px;border:1px solid var(--line);border-radius:var(--radius-card)}
+.panel .note{font-size:10px;color:var(--muted);margin:4px 0}
+.panel .btn.primary{background:var(--blue)}
+.ftr{border-top:1px solid var(--line);margin:5px 12px 0;padding:2px 0}
+.ftr .btn{font-size:12px;color:var(--blue)}
+.workspace-link #open-studio{background:var(--blue-soft);color:var(--blue-strong);border:1px solid var(--line)}
+.workspace-link a.web-link{background:transparent;border-color:transparent;color:var(--blue)}
+.workspace-link a.web-link small{color:var(--muted)}
+@media(min-width:480px){
+ .hdr{padding:12px 18px 7px}.brand{font-size:18px}
+ .status{padding-left:18px;padding-right:18px;font-size:12px}
+ .popup-source{margin:6px 18px 10px;padding:10px 12px}
+ .popup-source strong{font-size:14px}
+ .task-map{margin-left:18px;margin-right:18px}
+ .task-map>strong{font-size:13px;margin-bottom:7px}
+ .task-grid{gap:8px}:is(.task-grid,.extra-sources) .btn{min-height:52px;padding:9px 12px;font-size:13px;gap:10px}
+ :is(.task-grid,.extra-sources) .btn svg{width:22px;height:22px}
+ .source-caption{margin:5px 18px;font-size:12px}
+ .tabs{padding:0 18px;gap:5px;display:flex;flex-wrap:wrap}.tabs .tab{flex:1 0 auto;font-size:12px;min-height:34px;padding:5px 8px}
+ .panel{margin-left:18px;margin-right:18px;padding:10px 12px}
+ .back-tasks{margin-left:18px;margin-right:18px}
+ .ftr{margin-left:18px;margin-right:18px}
+ .workspace-link{padding:0 18px 12px;gap:7px}
+ .workspace-link a{font-size:12px}.workspace-link a.web-link small{font-size:11px}
+}
+/* Keep the popup shell and footer stable while changing source panels. */
+.ftr{margin-top:auto}
+.tabs .tab{white-space:nowrap;overflow-wrap:normal;word-break:normal;hyphens:none}
+.btn,.hint,.md-option,.workspace-link a{overflow-wrap:normal;word-break:normal;hyphens:none}
+.chat-input input{min-width:0}
+.chat-log{scrollbar-width:none}
+.chat-log::-webkit-scrollbar{display:none}
+body[data-view=formats] .hdr{padding-top:8px;padding-bottom:3px}
+body[data-view=formats] .panel{padding-top:7px;padding-bottom:7px}
+
+/* Size the document itself: sizing only body against 100vw can lock a browser
+   action popup to its initial narrow viewport. Keep long content in its panel. */
+html{--popup-width:400px;--popup-height:580px;width:var(--popup-width);height:var(--popup-height);overflow:hidden}
+html:has(body[data-view=tasks] .local-choices:not(.hidden)){--popup-height:600px}
+html:has(body[data-view=formats]){--popup-width:420px;--popup-height:580px}
+html:has(body[data-view=formats][data-source=web]){--popup-width:400px;--popup-height:450px}
+html:has(body[data-view=formats][data-source=image]){--popup-width:400px;--popup-height:490px}
+html:has(body[data-view=formats][data-source=markdown]){--popup-width:460px;--popup-height:600px}
+html:has(body[data-view=formats][data-source=chat]){--popup-width:460px;--popup-height:600px}
+body{width:100%;height:100%;min-width:0;max-width:none;overflow:hidden}
+body>*{min-width:0}
+.hdr{gap:10px;padding:10px 14px 7px;min-height:48px}
+.brand{white-space:nowrap;flex-shrink:0}
+.hdr .gcd-language{flex-shrink:0}
+.status{padding:0 14px 6px;line-height:16px}
+.popup-source{margin:2px 14px 10px;padding:10px 12px}
+.task-map{margin:0 14px 10px}
+.task-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+:is(.task-grid,.extra-sources) .btn{min-width:0;min-height:48px;padding:8px 10px}
+:is(.task-grid,.extra-sources) .btn span{min-width:0}
+.source-caption{margin:0 14px 5px}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0 14px;gap:5px;overflow:visible}
+html body .tabs .tab{min-width:0;min-height:34px;padding:6px 4px;font-size:12px;line-height:20px;white-space:nowrap;overflow-wrap:normal;overflow:hidden}
+/* tasks 视图外壳收窄到 380px：4 列每列约 86px，长标签（如西语 Conversación）在 12px 下会被裁，
+   单独收紧字号与内距保证七语言都不截断。 */
+html:has(body[data-view=tasks]) .tabs{padding:0 10px}
+html:has(body[data-view=tasks]) .tabs .tab{font-size:11px;padding:5px 2px;min-height:32px}
+.tabs::-webkit-scrollbar{display:none}
+.back-tasks{margin:0 14px 6px}
+html body .back-tasks.btn{min-height:28px;line-height:20px}
+.panel{min-height:0;margin:10px 14px 8px;padding:10px 12px}
+body[data-view=formats] .panel:not(.hidden){flex:1 1 auto;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:10px 12px}
+.panel .hint{line-height:1.4}
+.panel textarea{height:100px;max-width:100%}
+/* Markdown 预览：外层面板不再出现滚动条，剩余高度全部给预览区（其内部滚动） */
+body[data-view=formats] #panel-markdown:not(.hidden){display:flex;flex-direction:column}
+#panel-markdown .md-preview{flex:1 1 0%;height:auto;min-height:40px;overflow:auto;scrollbar-width:thin}
+/* 出结果后压缩固定内容：600px 弹窗高度上限内保证面板不出现外层滚动条 */
+#panel-markdown.has-result>.hint{display:none}
+#panel-markdown .md-warnings{max-height:44px;overflow:auto}
+#panel-markdown>.hint,#panel-markdown>.md-option,#panel-markdown>#md-extract,#panel-markdown>.md-warnings,#panel-markdown>.md-actions,#panel-markdown>.note{flex:none}
+/* 聊天页签：外层面板不再滚动，日志区吸收剩余高度内部滚动，底部导出按钮始终可见 */
+body[data-view=formats] #panel-chat:not(.hidden){display:flex;flex-direction:column}
+#panel-chat>*{flex:none}
+#panel-chat .chat-log{flex:1 1 0%;height:auto;min-height:40px;overflow:auto;scrollbar-width:thin}
+.panel textarea:not(.hidden){display:block}
+.panel input{max-width:100%}
+.chat-input{align-items:stretch;gap:8px}
+.chat-input input{width:0;min-width:0;flex:1 1 0}
+.chat-input .btn{flex:none}
+.chat-log{height:48px;overflow-wrap:anywhere;scrollbar-width:thin}
+.chat-log::-webkit-scrollbar{display:block;width:5px}
+.md-option{line-height:1.4;align-items:flex-start}
+.md-option input{flex:none;margin-top:2px}
+#chat-progress:empty{display:none}
+#import-chat{margin:2px 0 5px}
+/* 聊天页签内容最多：让预览区吸收剩余高度，德语等长文案下也不出现外层滚动条 */
+#panel-chat .chat-log{min-height:20px}
+#panel-chat .md-option{margin-bottom:4px}
+.ftr{flex:none;margin:0 14px;padding:4px 0}
+body[data-view=tasks] .ftr{margin-top:auto}
+html body .ftr .btn{min-height:32px;line-height:20px}
+.workspace-link{flex:none;grid-template-columns:repeat(2,minmax(0,1fr));padding:0 14px 10px;gap:6px}
+.workspace-link a{min-width:0;min-height:34px;line-height:1.35}
+.workspace-link a.web-link small{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html body .workspace-link #open-studio{min-height:36px}
+#hint[role=alert]{flex-shrink:1;min-height:0;max-height:64px;overflow:auto}
+/* Seven languages fit even in the shortest (450px) popup. */
+.hdr .gcd-language-list{max-height:none;overflow:visible;gap:2px}
+.hdr .gcd-language .gcd-language-list [data-language]{min-height:36px;padding:5px 10px;font-size:12px}
+.hdr .gcd-language-heading{padding:5px 10px 9px;margin-bottom:5px}
+.hdr .gcd-language-code{height:24px}
+
+/* Quick homepage: explicit width lets action popups measure their initial size.
+   Only the homepage grows with content; tools keep their existing panel sizes. */
+html:has(body[data-view=tasks]){--popup-width:380px}
+html:has(body[data-view=tasks]:not(.show-more)){height:auto;max-height:600px;overflow-y:auto}
+body[data-view=tasks]:not(.show-more){height:auto;overflow:visible}
+body:not(.show-more) .task-map,body:not(.show-more) .workspace-link,
+body:not(.show-more) .source-caption,body:not(.show-more) .tabs,
+body:not(.show-more) .ftr,body[data-view=tasks]:not(.show-more)>#status,
+body.show-more .quick-popup,body[data-view=formats] .quick-popup,
+body.show-more .popup-source{display:none}
+body[data-view=tasks]:not(.show-more) .hdr{margin-bottom:12px}
+body[data-view=tasks]:not(.show-more) .popup-source{margin:0 14px 12px;padding:0 2px 12px;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none;cursor:default}
+.popup-source strong{line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.popup-source p{overflow-wrap:anywhere}
+.quick-popup{padding:0 14px 14px;display:grid;gap:8px;flex:none;min-width:0}
+.quick-popup [hidden]{display:none!important}
+.quick-popup p{margin:0}
+.quick-popup p:empty{display:none}
+html body .quick-popup .btn{min-width:0;min-height:44px;padding:10px 12px;white-space:normal;line-height:1.35;border:1px solid #cbd5e3;border-radius:var(--radius-control);background:var(--card);color:var(--ink);box-shadow:none;cursor:pointer;transition:background-color .15s,border-color .15s,box-shadow .15s}
+.quick-popup .btn:not(:disabled):hover{border-color:var(--blue);background:var(--blue-soft);box-shadow:0 2px 6px #245be812}
+.quick-popup .btn:not(:disabled):active{background:#dce7ff;border-color:var(--blue-strong);transform:translateY(1px)}
+.quick-popup .btn:focus-visible,.hdr button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.quick-popup .btn:disabled{opacity:1;background:var(--fill);border-color:var(--line);color:var(--muted);cursor:not-allowed;box-shadow:none}
+.quick-popup svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.quick-popup .btn>svg:first-child{color:var(--blue)}
+.quick-popup .btn:disabled>svg{color:var(--muted)}
+.quick-popup #task-web{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;font-size:14px;background:var(--blue);border-color:var(--blue);color:white}
+.quick-popup #task-web svg{width:20px;height:20px;color:inherit}
+.quick-popup #task-web:not(:disabled):hover{background:var(--blue-strong);border-color:var(--blue-strong)}
+.quick-popup #task-web:not(:disabled):active{background:#193f9e}
+.quick-popup #task-web:disabled{background:var(--fill);border-color:var(--line);color:var(--muted)}
+.quick-secondary,.quick-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.quick-secondary .btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 8px}
+.quick-popup .quick-navigation{display:flex;align-items:center;justify-content:flex-start;gap:8px;text-align:left;text-decoration:none}
+.quick-navigation span{flex:1;min-width:0}
+.quick-popup .quick-chevron{width:14px;height:14px;color:var(--muted)}
+.quick-navigation:not(:disabled):hover .quick-chevron{color:var(--blue)}
+.quick-links .btn{font-size:12px}
+.quick-guest{padding-top:4px;font-size:11px;line-height:1.5;color:var(--muted);text-align:center}
+.quick-status{padding:10px 12px;background:var(--blue-soft);border:1px solid var(--line);border-radius:var(--radius-control)}
+.quick-status-text{font-size:12px;line-height:1.5;color:var(--blue-strong);font-weight:600;overflow-wrap:anywhere}
+.quick-status.is-error{background:var(--danger-bg);border-color:var(--danger)}
+.quick-status.is-error .quick-status-text{color:var(--danger)}
+.quick-status-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+html body .quick-status-actions .btn{min-height:36px;padding:7px 10px;font-size:12px}
+/* Language selection may grow the compact homepage, but never clips the menu. */
+html:has(body[data-view=tasks]:not(.show-more) .gcd-language-trigger[aria-expanded=true]){min-height:410px}
+@media(max-width:380px){.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}html body .tabs .tab{font-size:11px;padding:5px 3px}}
+@media(prefers-reduced-motion:reduce){.quick-popup .btn{transition:none;transform:none}}
+
+.quick-official{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid var(--line);padding-top:8px}
+.quick-official a{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px;border-radius:8px;color:var(--blue);font-size:12px;text-decoration:none;cursor:pointer;text-align:center}
+.quick-official a:hover{background:var(--blue-soft);text-decoration:underline}
+.quick-official a:active{background:var(--fill-strong)}
+.quick-official a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+body.show-more[data-view=tasks] .task-grid{grid-template-columns:1fr}
+body.show-more[data-view=tasks]:not(.sources-open) .tabs,
+body.show-more[data-view=tasks]:not(.sources-open) .source-caption,
+body:not(.sources-open) .extra-sources{display:none}
+.extra-sources .btn{width:100%;margin-top:8px}
+/* Expanded tool groups can exceed the popup cap in narrow/translated layouts.
+   Keep their natural height and allow scrolling instead of clipping the footer. */
+html:has(body.show-more[data-view=tasks]){--popup-height:600px;max-height:600px}
+body.show-more[data-view=tasks]{overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
+body.show-more[data-view=tasks]>*{flex-shrink:0}
+
+/* Tool overview is content-sized, with one consistent local/web destination row. */
+html:has(body.show-more[data-view=tasks]){height:auto;max-height:600px;overflow-y:auto}
+body.show-more[data-view=tasks]{height:auto;overflow:visible}
+body.show-more[data-view=tasks] .workspace-link{margin-top:12px}
+.workspace-link{border-top:1px solid var(--line);margin-left:14px;margin-right:14px;padding:10px 0 12px;align-items:stretch}
+.workspace-link #open-studio{grid-column:auto}
+.workspace-link .web-link{margin-top:0!important;display:flex;flex-direction:column;justify-content:center}
+/* Footer text should remain legible in a 380px action popup. */
+.quick-guest,.quick-official a{font-size:13px}
+body.show-more[data-view=tasks] .task-map .hint{font-size:13px;line-height:1.5;color:#41516b}
+
+.quick-status.is-success{background:#effaf5;border-color:#a9dbc0}
+.quick-status.is-success .quick-status-text{color:#176b50;font-size:13px}
+.quick-status.is-success .quick-status-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+html body .quick-status.is-success .quick-status-actions .btn{min-height:42px;font-size:13px;font-weight:650;white-space:normal;line-height:1.25}
+html body .quick-status.is-success .quick-status-actions .quick-result-download{background:var(--blue);border-color:var(--blue);color:#fff}
+.quick-status.is-success .quick-status-actions .btn:focus-visible{outline:3px solid #8d9ff0;outline-offset:2px}

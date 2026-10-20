@@ -1,0 +1,6 @@
+// Keep the selected webpage when moving between local extension tools.
+(()=>{const header=document.querySelector('.extension-header');if(!header)return;const page=location.pathname.split('/').pop();const incoming=new URLSearchParams(location.search).get('tabId');try{if(incoming&&/^\d+$/.test(incoming)&&Number(incoming)>0)sessionStorage.setItem('gcd-source-tab',incoming);const id=sessionStorage.getItem('gcd-source-tab');if(id&&/^\d+$/.test(id))header.querySelectorAll('a[href="workspace.html"]').forEach(a=>a.href='workspace.html?tabId='+id);}catch{}
+ header.querySelectorAll('nav a').forEach(a=>{if(new URL(a.href).pathname.split('/').pop()===page)a.setAttribute('aria-current','page');});
+ document.addEventListener('change',e=>{if(e.target.id!=='target-tabs')return;const id=e.target.value;try{if(id)sessionStorage.setItem('gcd-source-tab',id);else sessionStorage.removeItem('gcd-source-tab');}catch{}header.querySelectorAll('a').forEach(a=>{if(new URL(a.href).pathname.endsWith('/workspace.html'))a.href='workspace.html'+(id?'?tabId='+encodeURIComponent(id):'');});});
+ const info=header.querySelector('details');document.addEventListener('click',e=>{if(!info.contains(e.target))info.open=false;});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&info.open){info.open=false;info.querySelector('summary').focus();}});
+})();

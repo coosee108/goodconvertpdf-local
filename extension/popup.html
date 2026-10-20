@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><script src="i18n-config.js"></script><script src="i18n-runtime.js"></script><link rel="stylesheet" href="i18n.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoodConvertPDF</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-view="tasks">
+  <header class="hdr">
+    <div class="brand"><span data-i18n="msg.9f6c0d8b3c33" style="display:contents">GoodConvert</span><span><span data-i18n="msg.1d393b0081b6" style="display:contents">PDF</span></span></div>
+  </header>
+
+  <div id="hint" class="hint" role="alert" style="display:none;margin:0 16px 8px"></div>
+
+  <div class="popup-source"><strong id="popup-source-title"><span data-i18n="ext.9d726a8df570" style="display:contents">Checking current page…</span></strong><p id="popup-source-note" class="hint" role="status"></p></div>
+  <section class="task-map" aria-label="Choose a task" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.49958d244ea8&quot;}">
+    <strong><span data-i18n="ext.fb0d95c2d7d5" style="display:contents">What would you like to do?</span></strong>
+    <div class="task-grid">
+      <button id="task-web" class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"></rect><path d="M3 9h18M8 6.5h.01M12 12v5m-3-3 3 3 3-3"></path></svg><span><span data-i18n="ext.0df1156297b4" style="display:contents">Save this webpage</span></span></button>
+      <button id="task-chat" class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 3v-3H3V6a2 2 0 0 1 2-2Z"></path><path d="M7 9h10M7 13h6"></path></svg><span><span data-i18n="ext.8e468c72d204" style="display:contents">Export AI conversation</span></span></button>
+      <button id="task-local" class="btn" type="button" aria-expanded="false" aria-controls="local-choices"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l3 4h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"></path><path d="M8 13h8m-4-3v6"></path></svg><span><span data-i18n="ext.013c8ce6f356" style="display:contents">Convert local content</span></span></button>
+      <button id="task-pdf" class="btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l4 4v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm8 0v5h4M3 7v12M10 12h6M10 16h6"></path></svg><span><span data-i18n="ext.7a2a738c73d5" style="display:contents">Organize a PDF</span></span></button>
+    </div>
+    <div id="local-choices" class="local-choices hidden" aria-label="Local content choices" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.11e309d2fad6&quot;}">
+      <button id="task-document" class="btn" type="button"><span data-i18n="ext.d6bd8c0aeee8" style="display:contents">Document</span></button>
+      <button id="task-html" class="btn" type="button"><span data-i18n="ext.aad34821dcf3" style="display:contents">HTML file</span></button>
+      <button id="task-images" class="btn" type="button"><span data-i18n="msg.be7e2f201293" style="display:contents">Images</span></button>
+    </div>
+    <p id="task-note" class="hint" role="status"></p>
+  </section>
+  <button id="show-tasks" class="back-tasks btn hidden" type="button"><span data-i18n="msg.4ed6d78201d2" style="display:contents">← Tasks</span></button>
+  <div class="source-caption"><span data-i18n="msg.459b8d5e3fb3" style="display:contents">Content source</span></div>
+  <nav class="tabs" role="tablist" aria-label="Content source" data-i18n-attrs="{&quot;aria-label&quot;:&quot;msg.459b8d5e3fb3&quot;}">
+    <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-web" tabindex="-1" data-tab="web" aria-label="Web" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.2975104784a4&quot;}"><span data-i18n="ext.2975104784a4" style="display:contents">Web</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-markdown" tabindex="-1" data-tab="markdown" aria-label="Markdown" data-i18n-attrs="{&quot;aria-label&quot;:&quot;msg.0e52f6b9d025&quot;}"><span data-i18n="msg.0e52f6b9d025" style="display:contents">Markdown</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-file" tabindex="-1" data-tab="file" aria-label="File" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.50009ce1da4d&quot;}"><span data-i18n="ext.50009ce1da4d" style="display:contents">File</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-image" tabindex="-1" data-tab="image" aria-label="Image" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.1aa4cb0bcca7&quot;}"><span data-i18n="ext.1aa4cb0bcca7" style="display:contents">Image</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-data" tabindex="-1" data-tab="data" aria-label="Data" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.cec3a9b89b2e&quot;}"><span data-i18n="ext.cec3a9b89b2e" style="display:contents">Data</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-thread" tabindex="-1" data-tab="thread" aria-label="Thread" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.5373c7f8a5a6&quot;}"><span data-i18n="ext.5373c7f8a5a6" style="display:contents">Thread</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-chat" tabindex="-1" data-tab="chat" aria-label="Chat" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.460b3a7da007&quot;}"><span data-i18n="ext.460b3a7da007" style="display:contents">Chat</span></button>
+  </nav>
+
+  <section class="panel" id="panel-web">
+    <p class="hint"><span data-i18n="ext.a9aaa6567ac2" style="display:contents">Convert the current page to a clean PDF — locally, no upload.</span></p>
+    <button id="convert-page" class="btn primary block" disabled=""><span data-i18n="ext.9b0921b09a5b" style="display:contents">Preview &amp; convert this page</span></button>
+  </section>
+
+  <section class="panel hidden" id="panel-markdown">
+    <p class="hint"><span data-i18n="ext.10b2216b0389" style="display:contents">Turn this page into a clean Markdown file — locally, no upload.</span></p>
+    <label class="md-option"><input type="checkbox" id="md-front-matter" checked=""><span data-i18n="ext.7b6f9f221e35" style="display:contents"> Include front-matter (title, source, date)</span></label>
+    <label class="md-option"><input type="checkbox" id="md-selection"><span data-i18n="ext.19595aee7046" style="display:contents"> Only the part you selected on the page</span></label>
+    <button id="md-extract" class="btn primary block" disabled=""><span data-i18n="ext.6250d6b77a6c" style="display:contents">Extract Markdown from this page</span></button>
+    <ul id="md-warnings" class="md-warnings hidden"></ul>
+    <textarea id="md-preview" class="md-preview hidden" rows="10" spellcheck="false" readonly="" aria-label="Markdown preview" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ext.c621839fa6ed&quot;}"></textarea>
+    <div id="md-actions" class="md-actions hidden">
+      <button id="md-copy" class="btn"><span data-i18n="ext.e21f935f11d7" style="display:contents">Copy</span></button>
+      <button id="md-download" class="btn primary"><span data-i18n="ext.4e8536851767" style="display:contents">Download .md</span></button>
+      <button id="md-to-pdf" class="btn"><span data-i18n="ext.3da67b0803fe" style="display:contents">Convert to PDF</span></button>
+    </div>
+    <p class="note"><span data-i18n="ext.5937aaa9078e" style="display:contents">Local · Zero-Upload</span></p>
+  </section>
+
+  <section class="panel hidden" id="panel-file">
+    <p class="hint"><span data-i18n="ext.f82e88ae4b8c" style="display:contents">Export plain text. Use the workspace for HTML rendering.</span></p>
+    <textarea id="file-text" rows="6" placeholder="Paste plain text here…" data-i18n-attrs="{&quot;placeholder&quot;:&quot;ext.e7cd748bca06&quot;}"></textarea>
+    <button id="convert-file" class="btn primary block"><span data-i18n="ext.1bf7868792f8" style="display:contents">Export as PDF</span></button>
+  </section>
+
+  <section class="panel hidden" id="panel-image">
+    <p class="hint"><span data-i18n="ext.2fb660f141ff" style="display:contents">Pick images — combined into one PDF locally. No upload.</span></p>
+    <p class="note"><span data-i18n="ext.b19357c7d9b4" style="display:contents">Arrange, rotate and preview images in the full workspace.</span></p>
+    <button id="convert-images" class="btn primary block"><span data-i18n="ext.fbf130daf482" style="display:contents">Open image workspace</span></button>
+    <p class="note"><span data-i18n="ext.5937aaa9078e" style="display:contents">Local · Zero-Upload</span></p>
+  </section>
+
+  <section class="panel hidden" id="panel-data">
+    <p class="hint"><span data-i18n="ext.ea751ff55e3a" style="display:contents">Paste CSV or JSON — rendered as a table, then printed to PDF.</span></p>
+    <textarea id="data-text" rows="6" placeholder="Paste CSV or JSON here…" data-i18n-attrs="{&quot;placeholder&quot;:&quot;ext.6363d8db807e&quot;}"></textarea>
+    <button id="convert-data" class="btn primary block"><span data-i18n="ext.c1eb7d31bf69" style="display:contents">Convert data to PDF</span></button>
+    <p class="note"><span data-i18n="ext.5937aaa9078e" style="display:contents">Local · Zero-Upload</span></p>
+  </section>
+
+  <section class="panel hidden" id="panel-thread">
+    <p class="hint"><span data-i18n="ext.52a7b94f66f7" style="display:contents">Paste an email thread or IM export — parsed into a readable transcript.</span></p>
+    <textarea id="thread-text" rows="6" placeholder="Paste email thread or chat export here…" data-i18n-attrs="{&quot;placeholder&quot;:&quot;ext.6a7f95149bdd&quot;}"></textarea>
+    <button id="convert-thread" class="btn primary block"><span data-i18n="ext.6128d701536f" style="display:contents">Convert conversation to PDF</span></button>
+    <p class="note"><span data-i18n="ext.5937aaa9078e" style="display:contents">Local · Zero-Upload</span></p>
+  </section>
+
+  <section class="panel hidden" id="panel-chat">
+    <p class="hint"><span data-i18n="ext.484146bb438a" style="display:contents">Import this AI conversation, then choose messages in the document workspace. Added content is not sent to an AI.</span></p>
+    <button id="import-chat" class="btn ghost block"><span data-i18n="ext.94ce0faa3f91" style="display:contents">Import AI chat from this page</span></button>
+    <div id="chat-log" class="chat-log"></div>
+    <div class="chat-input">
+      <input id="chat-msg" type="text" placeholder="Enter conversation content…" data-i18n-attrs="{&quot;placeholder&quot;:&quot;ext.c914eda9a6a7&quot;}">
+      <button id="chat-send" class="btn"><span data-i18n="ext.006e1fbb95ac" style="display:contents">Add content</span></button>
+    </div>
+
+    <label class="md-option"><input id="chat-load-history" type="checkbox"><span data-i18n="ext.e7dec6c0e028" style="display:contents"> Assist with loading older messages first</span></label>
+    <button id="stop-chat-load" class="btn block hidden" type="button"><span data-i18n="ext.f5c912a6eaee" style="display:contents">Stop loading history</span></button>
+    <p id="chat-progress" class="hint" role="status"></p>
+    <button id="export-chat" class="btn primary block"><span data-i18n="ext.e34e84a69f5c" style="display:contents">Export chat as PDF</span></button>
+  </section>
+
+  <div class="workspace-link">
+    <button id="open-studio" class="btn block"><span data-i18n="ext.aaa2f2b8b791" style="display:contents">Open full workspace</span></button>
+    <a class="web-link" data-web-link="" data-site="" data-web-entry="" href="#" target="_blank" rel="noopener"><span data-i18n="ext.95637703afaa" style="display:contents">Official website ↗</span><small id="web-link-domain"></small></a>
+  </div>
+
+  
+  
+  
+  <script src="config.js"></script>
+  <script src="converters.js"></script>
+  <script src="shared/extension-source.js"></script>
+  <script src="shared/web-entries.js"></script>
+  <script src="shared/markdown.js"></script>
+  <script src="shared/session-store.js"></script>
+  <script src="shared/site-links.js"></script>
+  <script src="popup.js"></script>
+  <script src="shared/conversion-options.js"></script><script src="shared/quick-preferences.js"></script><script src="shared/pdf-history.js"></script><script src="shared/quick-i18n.js"></script><script src="popup-quick.js"></script>
+
+
+</body></html>
