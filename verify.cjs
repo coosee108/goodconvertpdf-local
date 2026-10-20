@@ -3,6 +3,14 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = path.join(__dirname, 'extension');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'manifest.json'), 'utf8'));
+const prefix = 'window.GCD_I18N_CONFIG=';
+const sourceI18n = fs.readFileSync(path.join(root, 'i18n-config.js'), 'utf8');
+assert(sourceI18n.startsWith(prefix));
+const i18n = JSON.parse(sourceI18n.slice(prefix.length).replace(/;\s*$/, ''));
+for (const locale of i18n.locales) {
+  const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, 'locales', locale + '.json'), 'utf8'));
+  assert.deepEqual(Object.keys(catalog).sort(), Object.keys(i18n.catalogs.en).sort(), `Translation keys differ for ${locale}`);
+}
 const excluded = ['api.js', 'auth-callback.html', 'auth-callback.js', 'env.js', 'config.dev.js', 'config.prod.js'];
 for (const name of excluded) assert(!fs.existsSync(path.join(root, name)), `Unexpected private file: ${name}`);
 assert(!('key' in manifest), 'Chrome store identity key must not be published');
