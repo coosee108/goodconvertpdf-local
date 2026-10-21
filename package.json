@@ -2,10 +2,17 @@
   "name": "goodconvertpdf-local",
   "private": true,
   "version": "1.0.6",
-  "license": "ISC",
-  "engines": { "node": ">=22" },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "node verify.cjs",
     "build": "node build.cjs"
+  },
+  "homepage": "https://goodconvertpdf.com/",
+  "repository": {
+    "url": "https://github.com/coosee108/goodconvertpdf-local.git",
+    "type": "git"
   }
 }

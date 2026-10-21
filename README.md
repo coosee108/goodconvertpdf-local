@@ -1,19 +1,116 @@
+<div align="center">
+
+<a href="https://goodconvertpdf.com/"><img src="extension/icons/icon128.png" width="80" alt="GoodConvertPDF"></a>
+
 # GoodConvertPDF Local
 
-GoodConvertPDF Local converts the current browser page to PDF and offers local document and PDF tools. The extension runs without an account or conversion server. Links to the [official website](https://goodconvertpdf.com/) open a separate tab for hosted services.
+**Save webpages, articles, and selected content as PDFs. Convert documents and organize PDFs in your browser.**
 
-## Build and use
+Local processing · No account required · Chrome / Edge
 
-Requires Node.js 22 or newer. Run `npm test` to check the source and `npm run build` to make a loadable directory. Open `chrome://extensions` or `edge://extensions`, enable Developer mode, choose **Load unpacked**, and select `build/`.
+**English** · [简体中文](README.zh-CN.md)
 
-The Chrome and Edge implementation uses the debugger permission to print the current tab. It can temporarily conflict with an open DevTools session on that tab. Firefox needs a separate package with its native print flow and is not included in this first source release.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Source checks](https://github.com/coosee108/goodconvertpdf-local/actions/workflows/ci.yml/badge.svg)](https://github.com/coosee108/goodconvertpdf-local/actions/workflows/ci.yml)
+[![Official website](https://img.shields.io/badge/Website-goodconvertpdf.com-4f46e5)](https://goodconvertpdf.com/)
 
-The `extension/` directory is the editable source. Translation catalogs are in `locales/`; `npm run build` compiles them into the extension. `build/` is generated. This source snapshot was extracted from the GoodConvertPDF product repository; commercial account, payment and hosted conversion code are outside this repository. Local PDF history is kept in this browser according to the extension's retention controls.
+**[Visit the website](https://goodconvertpdf.com/) · [Quick start](#quick-start) · [Screenshots](#screenshots) · [FAQ](#faq) · [Contribute](CONTRIBUTING.md)**
 
-## Contributing
+<img src="docs/screenshots/quick-save.png" width="380" alt="Extension popup with full-page, article-only, and selected-content PDF actions">
 
-Please open an issue with browser/version, a reproducible public page or a sanitized sample, expected result, and actual result. Do not attach private documents or account tokens. Fixes to local conversion, browser compatibility, accessibility, tests and translations are welcome. See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
+</div>
+
+## What you can do
+
+- **Save the page you are viewing.** Generate a PDF from an open browser tab, preview it, then open or download it.
+- **Choose what to keep.** Capture the full page, extract the main article, or select content visually. Open the workspace for more control.
+- **Tune the layout.** Adjust paper, orientation, margins, scale, backgrounds, and loading options. Reuse settings for a website.
+- **Follow the process.** See loading and generation stages, cancel a task, or skip waiting. Review resource warnings alongside the result.
+- **Convert local content.** Work with HTML, images, text, Markdown, data, and conversation content before exporting.
+- **Finish your PDFs.** Merge, split, organize pages, and add text watermarks, page numbers, a cover, and metadata.
+- **Reopen recent PDFs.** Default local retention is 7 days, up to 20 PDFs and 100 MB total, with retention and deletion controls.
+- **Use your language.** English, Simplified Chinese, German, Spanish, French, Japanese, and Brazilian Portuguese interfaces.
+
+Need hosted conversion of a public URL, or account and plan management? Visit **[GoodConvertPDF.com](https://goodconvertpdf.com/)**. This repository provides the buildable local community edition; website services have their own processing behavior and terms.
+
+## Quick start
+
+You need **Node.js 22 or newer**, Git, and desktop Chrome or Edge.
+
+```sh
+git clone https://github.com/coosee108/goodconvertpdf-local.git
+cd goodconvertpdf-local
+npm test
+npm run build
+```
+
+1. Open `chrome://extensions` or `edge://extensions`.
+2. Enable **Developer mode** and choose **Load unpacked**.
+3. Select the generated **`build/`** folder and pin the extension.
+4. Open a regular webpage, choose **Save current webpage**, then preview and download your PDF.
+
+No additional `npm install` step is needed for the current build: browser dependencies are bundled in the source. After updating the code, rebuild and reload the extension from the browser's extensions page.
+
+This build targets **Chrome and Edge**. The separate Firefox native-print implementation is not included in this community build.
+
+## Screenshots
+
+These screenshots were supplied by the maintainer from the extension. Labels may vary by version or language. Third-party webpages shown in the examples illustrate export behavior and do not imply an affiliation or endorsement.
+
+### Preview and save
+
+Open PDF, Download PDF, Download PNG, Print, and further PDF tools are available from the result area. Review the content and loading warnings: successful generation does not guarantee every lazy-loaded resource was captured.
+
+![Generated PDF with preview and export actions](docs/screenshots/pdf-preview.png)
+
+<details>
+<summary><strong>More screenshots: selection, loading, documents, PDF tools, and recent results</strong></summary>
+
+#### Select content on the page
+![Visual content selection](docs/screenshots/select-content.png)
+
+#### Control loading and waiting
+![Generation progress with cancel and skip-waiting actions](docs/screenshots/loading.png)
+
+#### Convert local documents
+![Document editing and preview](docs/screenshots/documents.png)
+
+#### Organize and finish PDFs
+![PDF merge, split, organize, and watermark tools](docs/screenshots/pdf-tools.png)
+
+#### Reopen recent PDFs
+![Recent PDFs and local storage controls](docs/screenshots/recent-pdfs.png)
+
+</details>
+
+## Privacy and permissions
+
+Local conversion does not require an account or a conversion server. Source webpages can still request their own remote images, fonts, and other resources. Official website links open a separate website.
+
+The extension requests active-tab access, scripting, tabs, storage, downloads, and debugger permissions, along with webpage host access. These support page reading and selection, printing, settings, and result storage. Chrome / Edge webpage PDF generation uses the debugger interface, so the browser may display a debugging banner.
+
+Recent PDFs are stored in the extension's local IndexedDB. Expired results and results over the count or size limits are removed during cleanup checks, not on a guaranteed schedule while the browser is closed. Incognito results are not persisted. Turning off automatic retention affects future results; existing results can be deleted separately.
+
+## FAQ
+
+**Why can some pages not be saved?** Browser settings, extension pages, and other protected pages cannot be converted. Open a regular HTTP(S) page. Existing PDFs can be processed with the PDF tools.
+
+**Can I save a page behind a login?** You can attempt to save a page already open in your browser without giving a conversion service your login credentials. Embedded or protected content and site restrictions may still affect the result.
+
+**Why is the debugger busy?** Close DevTools on the source tab and finish any conflicting debugging task, then retry.
+
+**Will text be selectable?** Webpage printing generally preserves text and links; images do not automatically become text. Some local HTML / document downloads use image rendering. Follow the interface's Print option when searchable text is needed.
+
+**What if the preview is blank?** Choose Open PDF to view the same generated file. If content is missing, review loading warnings, allow images to load, and adjust the settings before retrying.
+
+**Do I need an account or a paid plan?** Local features do not require sign-in or website conversion credits. Hosted conversion and account plans are managed on the [official website](https://goodconvertpdf.com/).
+
+## Development and contributing
+
+`extension/` contains the extension source, `locales/` the editable translation catalogs, and `docs/screenshots/` the product screenshots. `build/` is generated. Run `npm test` for source-boundary and asset checks, then `npm run build` to build the extension. These checks do not replace PDF quality testing in a real browser.
+
+Contributions to conversion compatibility, accessibility, translations, and documentation are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a change and [SECURITY.md](SECURITY.md) for vulnerability reporting. If the project helps you, consider starring the repository or sharing the [official website](https://goodconvertpdf.com/).
 
 ## License
 
-The GoodConvertPDF-authored source is offered under the ISC license in [LICENSE](LICENSE). Bundled dependencies have their own licenses under `extension/vendor/licenses/`; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Names and logos are not granted for implying an official or endorsed fork.
+GoodConvertPDF-authored source is available under the **[MIT License](LICENSE)**. Bundled third-party dependencies retain their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and `extension/vendor/licenses/`. Third-party content and marks visible in screenshots belong to their respective owners. Project names and logos must not be used to imply an unauthorized official endorsement.
