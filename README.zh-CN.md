@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://goodconvertpdf.com/"><img src="extension/icons/icon128.png" width="80" alt="GoodConvertPDF"></a>
+<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer"><img src="extension/icons/icon128.png" width="80" alt="GoodConvertPDF"></a>
 
 # GoodConvertPDF Local
 
@@ -8,13 +8,13 @@
 
 本地处理 · 无需登录 · Chrome / Edge
 
-[English](README.md) · **简体中文**
+[English](README.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md) · [日本語](README.ja.md) · **简体中文**
 
 [![MIT 许可证](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![源码检查](https://github.com/coosee108/goodconvertpdf-local/actions/workflows/ci.yml/badge.svg)](https://github.com/coosee108/goodconvertpdf-local/actions/workflows/ci.yml)
-[![访问官网](https://img.shields.io/badge/官网-goodconvertpdf.com-4f46e5)](https://goodconvertpdf.com/)
+<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/官网-goodconvertpdf.com-4f46e5" alt="访问官网"></a>
 
-**[访问官网](https://goodconvertpdf.com/) · [快速安装](#快速安装) · [功能截图](#功能截图) · [常见问题](#常见问题) · [参与贡献](CONTRIBUTING.md)**
+**<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">访问官网 ↗</a> · [快速安装](#快速安装) · [功能截图](#功能截图) · [常见问题](#常见问题) · [参与贡献](CONTRIBUTING.md)**
 
 <img src="docs/screenshots/quick-save.png" width="380" alt="插件弹窗：保存当前网页、只保存正文、选择内容保存">
 
@@ -31,7 +31,7 @@
 - **重新打开最近 PDF**：本机默认保留 7 天，最多 20 份、总计 100 MB；支持关闭自动保留与清理。
 - **七种界面语言**：英语、简体中文、德语、西班牙语、法语、日语和巴西葡萄牙语。
 
-需要在线转换公开网址，或管理账户与套餐？请访问 **[GoodConvertPDF 官网](https://goodconvertpdf.com/)**。本仓库提供可自行构建的本地社区版；官网服务有各自的处理方式和使用条件。
+需要在线转换公开网址，或管理账户与套餐？请访问 **<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">GoodConvertPDF 官网 ↗</a>**。本仓库提供可自行构建的本地社区版；官网服务有各自的处理方式和使用条件。
 
 ## 快速安装
 
@@ -103,13 +103,13 @@ npm run build
 
 **结果预览空白怎么办？** 先点击「打开 PDF」查看同一份文件。如果内容缺失，检查加载提示、等待图片加载完成，再调整设置重试。
 
-**社区版需要付费或登录吗？** 本地功能无需登录，也不依赖官网转换额度。在线转换与账户套餐请前往[官网](https://goodconvertpdf.com/)。
+**社区版需要付费或登录吗？** 本地功能无需登录，也不依赖官网转换额度。在线转换与账户套餐请前往<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">官网 ↗</a>。
 
 ## 开发与贡献
 
 `extension/` 是插件源码，`locales/` 是可编辑语言文案，`docs/screenshots/` 是展示截图，`build/` 是生成产物。执行 `npm test` 检查源码边界与资源引用，执行 `npm run build` 构建插件；这两项检查不能代替真实浏览器的 PDF 质量验收。
 
-欢迎改进转换兼容性、可访问性、翻译和文档。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)；安全问题请参阅 [SECURITY.md](SECURITY.md)。如果项目对你有帮助，欢迎 Star 或分享[官网](https://goodconvertpdf.com/)。
+欢迎改进转换兼容性、可访问性、翻译和文档。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)；安全问题请参阅 [SECURITY.md](SECURITY.md)。如果项目对你有帮助，欢迎 Star 或分享<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">官网 ↗</a>。
 
 ## 许可证
 

@@ -6,7 +6,7 @@ Thanks for helping improve local webpage conversion and PDF tools.
 
 Open a [GitHub issue](https://github.com/coosee108/goodconvertpdf-local/issues) with your browser and version, extension version, steps to reproduce, expected behavior, and actual behavior. Include a public example URL or a sanitized sample when possible. Remove private content from screenshots and documents. Report vulnerabilities through [SECURITY.md](SECURITY.md).
 
-Website account, subscription, and hosted-conversion questions belong to the support options on [goodconvertpdf.com](https://goodconvertpdf.com/).
+Website account, subscription, and hosted-conversion questions belong to the support options on <a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">goodconvertpdf.com ↗</a>.
 
 ## Submit a change
 
@@ -20,4 +20,4 @@ Keep changes focused on local conversion, document tools, accessibility, browser
 
 ## Documentation
 
-Keep [README.md](README.md) and [README.zh-CN.md](README.zh-CN.md) consistent when changing installation steps or capabilities. Use real product screenshots and clearly distinguish local features from hosted website services.
+Keep the seven README translations consistent when changing installation steps or capabilities. Use real product screenshots and clearly distinguish local features from hosted website services.

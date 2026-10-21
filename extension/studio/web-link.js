@@ -3,5 +3,9 @@
 (function () {
   var web = (self.CONFIG && self.CONFIG.WEB_URL) || 'https://goodconvertpdf.com';
   var links = document.querySelectorAll('[data-web-link]');
-  for (var i = 0; i < links.length; i++) links[i].href = String(web).replace(/\/?$/, '/');
+  for (var i = 0; i < links.length; i++) {
+    links[i].href = String(web).replace(/\/?$/, '/');
+    links[i].target = '_blank';
+    links[i].rel = 'noopener noreferrer';
+  }
 })();
