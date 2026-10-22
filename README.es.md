@@ -29,7 +29,16 @@ Procesamiento local · No requiere cuenta · Chrome / Edge
 - Combina y divide archivos PDF, organiza páginas y añade marcas de agua, números de página, portada y metadatos.
 - Vuelve a abrir PDF recientes guardados localmente. Por defecto se conservan 7 días, hasta 20 archivos y 100 MB en total.
 
-Para convertir URL públicas en línea o gestionar cuentas y planes, visita el <a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">sitio oficial ↗</a>.
+## Elegir la extensión o el sitio web
+
+| Uso | Extensión local de la comunidad (este repositorio) | Sitio web |
+| --- | --- | --- |
+| Página abierta o con sesión iniciada | Guardar la página, el artículo o una selección en Chrome / Edge. | Usa la extensión para páginas que requieren tu sesión del navegador. |
+| URL pública | Abre la página y expórtala localmente. | Pega una URL pública para convertirla en el servidor; admite procesamiento por lotes. |
+| Dónde se procesa | En el navegador; las páginas de origen pueden seguir cargando recursos remotos. | URL públicas en el servidor; HTML, imágenes y documentos locales en el navegador. |
+| Cuenta y cuota en la nube | Las funciones locales no necesitan cuenta ni créditos de conversión en la nube. | Herramientas locales sin cuenta; conversión en línea con cuenta y la cuota del plan. |
+
+<a href="https://goodconvertpdf.com/es/" target="_blank" rel="noopener noreferrer">Probar el sitio web ↗</a> · <a href="https://goodconvertpdf.com/es/pricing.html" target="_blank" rel="noopener noreferrer">Planes y límites actuales ↗</a>
 
 ## Inicio rápido
 

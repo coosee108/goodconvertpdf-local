@@ -31,7 +31,16 @@ Local processing · No account required · Chrome / Edge
 - **Reopen recent PDFs.** Default local retention is 7 days, up to 20 PDFs and 100 MB total, with retention and deletion controls.
 - **Use your language.** English, Simplified Chinese, German, Spanish, French, Japanese, and Brazilian Portuguese interfaces.
 
-Need hosted conversion of a public URL, or account and plan management? Visit **<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">GoodConvertPDF.com ↗</a>**. This repository provides the buildable local community edition; website services have their own processing behavior and terms.
+## Choose the extension or the website
+
+| Use case | Local community extension (this repository) | Website |
+| --- | --- | --- |
+| Current or signed-in page | Save the page open in Chrome / Edge, including article or selected content. | Use the extension for pages that require your browser login. |
+| Public URL | Open the page, then export it locally. | Paste a public URL for server-rendered conversion; batch processing is available. |
+| Where processing happens | Local browser conversion; source pages may still load remote resources. | Public URLs run on the server; local HTML, images and documents run in your browser. |
+| Account and cloud allowance | Local features need no account and use no cloud conversion credits. | Local tools need no account; online conversion requires an account and uses the plan allowance. |
+
+<a href="https://goodconvertpdf.com/en/" target="_blank" rel="noopener noreferrer">Try the website ↗</a> · <a href="https://goodconvertpdf.com/en/pricing.html" target="_blank" rel="noopener noreferrer">Plans and current limits ↗</a>
 
 ## Quick start
 

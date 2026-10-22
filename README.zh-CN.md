@@ -31,7 +31,16 @@
 - **重新打开最近 PDF**：本机默认保留 7 天，最多 20 份、总计 100 MB；支持关闭自动保留与清理。
 - **七种界面语言**：英语、简体中文、德语、西班牙语、法语、日语和巴西葡萄牙语。
 
-需要在线转换公开网址，或管理账户与套餐？请访问 **<a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">GoodConvertPDF 官网 ↗</a>**。本仓库提供可自行构建的本地社区版；官网服务有各自的处理方式和使用条件。
+## 插件版与网页版如何选择
+
+| 使用场景 | 本地社区插件（本仓库） | 网页版 |
+| --- | --- | --- |
+| 当前页面或已登录页面 | 在 Chrome / Edge 中保存已打开的网页、正文或选中内容。 | 需要浏览器登录状态的页面请使用插件。 |
+| 公开网址 | 先打开网页，再在本地导出。 | 粘贴公开网址，由服务器转换；支持批量处理。 |
+| 处理位置 | 转换在本地浏览器完成；源网页仍可能加载远程资源。 | 公开网址由服务器处理；本地 HTML、图片和文档在浏览器中处理。 |
+| 账户与云端额度 | 本地功能无需账户，不消耗云端转换额度。 | 本地工具无需账户；在线转换需要账户，并使用对应套餐的额度。 |
+
+<a href="https://goodconvertpdf.com/zh-CN/" target="_blank" rel="noopener noreferrer">使用网页版 ↗</a> · <a href="https://goodconvertpdf.com/zh-CN/pricing.html" target="_blank" rel="noopener noreferrer">套餐与最新限制 ↗</a>
 
 ## 快速安装
 

@@ -29,7 +29,16 @@ Lokale Verarbeitung · Kein Konto erforderlich · Chrome / Edge
 - PDFs zusammenführen, teilen, Seiten sortieren sowie Wasserzeichen, Seitenzahlen, Deckblatt und Metadaten hinzufügen.
 - Zuletzt erstellte PDFs lokal erneut öffnen. Standardmäßig werden sie bis zu 7 Tage aufbewahrt, höchstens 20 Dateien mit insgesamt 100 MB.
 
-Für die Online-Konvertierung öffentlicher URLs sowie Konto- und Tarifverwaltung besuchen Sie die <a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">offizielle Website ↗</a>.
+## Erweiterung oder Website wählen
+
+| Anwendungsfall | Lokale Community-Erweiterung (dieses Repository) | Website |
+| --- | --- | --- |
+| Aktuelle Seite oder angemeldete Sitzung | Geöffnete Seiten, Artikel oder ausgewählte Inhalte in Chrome / Edge speichern. | Für Seiten mit Browser-Anmeldung die Erweiterung verwenden. |
+| Öffentliche URL | Seite öffnen und lokal exportieren. | Öffentliche URL zur serverseitigen Konvertierung einfügen; Stapelverarbeitung ist verfügbar. |
+| Verarbeitungsort | Lokal im Browser; Quellseiten können weiterhin entfernte Ressourcen laden. | Öffentliche URLs auf dem Server; lokale HTML-Dateien, Bilder und Dokumente im Browser. |
+| Konto und Cloud-Kontingent | Lokale Funktionen benötigen kein Konto und kein Cloud-Kontingent. | Lokale Werkzeuge ohne Konto; Online-Konvertierung benötigt ein Konto und nutzt das Kontingent des Tarifs. |
+
+<a href="https://goodconvertpdf.com/de/" target="_blank" rel="noopener noreferrer">Website ausprobieren ↗</a> · <a href="https://goodconvertpdf.com/de/pricing.html" target="_blank" rel="noopener noreferrer">Tarife und aktuelle Limits ↗</a>
 
 ## Schnellstart
 

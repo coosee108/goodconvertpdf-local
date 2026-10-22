@@ -29,7 +29,16 @@ Traitement local · Aucun compte requis · Chrome / Edge
 - Fusionnez et découpez des PDF, organisez les pages et ajoutez filigranes, numéros de page, couverture et métadonnées.
 - Rouvrez les PDF récents conservés localement. Par défaut : 7 jours, 20 fichiers maximum et 100 Mo au total.
 
-Pour convertir une URL publique en ligne ou gérer votre compte et votre abonnement, rendez-vous sur le <a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">site officiel ↗</a>.
+## Choisir entre l’extension et le site
+
+| Usage | Extension communautaire locale (ce dépôt) | Site web |
+| --- | --- | --- |
+| Page ouverte ou session connectée | Enregistrer la page, l’article ou une sélection dans Chrome / Edge. | Utiliser l’extension pour les pages nécessitant votre session de navigateur. |
+| URL publique | Ouvrir la page, puis l’exporter localement. | Coller une URL publique pour une conversion sur le serveur ; traitement par lots disponible. |
+| Lieu du traitement | Dans le navigateur ; les pages sources peuvent encore charger des ressources distantes. | URL publiques sur le serveur ; HTML, images et documents locaux dans le navigateur. |
+| Compte et quota cloud | Les fonctions locales ne nécessitent ni compte ni crédits cloud. | Outils locaux sans compte ; conversion en ligne avec un compte et le quota du forfait. |
+
+<a href="https://goodconvertpdf.com/fr/" target="_blank" rel="noopener noreferrer">Essayer le site ↗</a> · <a href="https://goodconvertpdf.com/fr/pricing.html" target="_blank" rel="noopener noreferrer">Forfaits et limites actuelles ↗</a>
 
 ## Installation rapide
 

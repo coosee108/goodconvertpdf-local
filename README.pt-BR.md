@@ -29,7 +29,16 @@ Processamento local · Sem necessidade de conta · Chrome / Edge
 - Mescle e divida PDFs, organize páginas e adicione marcas d’água, números de página, capa e metadados.
 - Reabra PDFs recentes salvos no dispositivo. Por padrão, eles ficam por 7 dias, até 20 arquivos e 100 MB no total.
 
-Para converter URLs públicas online ou gerenciar conta e planos, acesse o <a href="https://goodconvertpdf.com/" target="_blank" rel="noopener noreferrer">site oficial ↗</a>.
+## Escolher a extensão ou o site
+
+| Uso | Extensão local da comunidade (este repositório) | Site |
+| --- | --- | --- |
+| Página aberta ou com sessão iniciada | Salvar a página, o artigo ou uma seleção no Chrome / Edge. | Use a extensão para páginas que exigem sua sessão do navegador. |
+| URL pública | Abra a página e exporte localmente. | Cole uma URL pública para conversão no servidor; processamento em lote disponível. |
+| Onde ocorre o processamento | No navegador; as páginas de origem ainda podem carregar recursos remotos. | URLs públicas no servidor; HTML, imagens e documentos locais no navegador. |
+| Conta e cota na nuvem | Os recursos locais não exigem conta nem créditos de conversão na nuvem. | Ferramentas locais sem conta; conversão online com conta e a cota do plano. |
+
+<a href="https://goodconvertpdf.com/pt-BR/" target="_blank" rel="noopener noreferrer">Experimentar o site ↗</a> · <a href="https://goodconvertpdf.com/pt-BR/pricing.html" target="_blank" rel="noopener noreferrer">Planos e limites atuais ↗</a>
 
 ## Início rápido
 
