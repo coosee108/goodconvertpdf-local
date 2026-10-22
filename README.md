@@ -4,7 +4,7 @@
 
 # GoodConvertPDF Local
 
-**Save webpages, articles, and selected content as PDFs. Convert documents and organize PDFs in your browser.**
+**Open-source Chrome and Edge browser extension to save webpages, articles, and selected content as PDFs. Convert local documents and organize PDFs in your browser.**
 
 Local processing · No account required · Chrome / Edge
 
